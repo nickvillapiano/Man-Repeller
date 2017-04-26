@@ -1,0 +1,152 @@
+html, body {
+  @include font-smoothing;
+  @include transition( opacity 0.3s ease-out );
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  transition: transform 1s;
+  // background: $white;
+
+  &.slide-down {
+
+    .border {
+      transform: translateY(100vh);
+    }
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+// Images
+img.responsive-img,
+video.responsive-video {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+}
+
+.fade {
+  opacity: 0;
+  transform-origin: 0 50%;
+
+  &.in {
+    opacity: 1;
+  }
+}
+
+// Responsive Videos
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  &.no-controls {
+    padding-top: 0;
+  }
+
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.clearfix {
+
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.upside-down {
+    transform: rotateX(180deg);
+    transform-origin: center;
+}
+
+::selection {
+    color: $white;
+    background: $gold;
+}
+
+.button {
+    background: $gold;
+    color: $white;
+    text-transform: uppercase;
+    @include knockout-50;
+    font-size: 1.6rem;
+    text-align: center;
+    width: 20rem;
+    height: 5rem;
+    @include inline-vertical;
+    padding: 1.7rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 150%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: $black;
+        z-index: -1;
+        transform: skew(-30deg) translateX(75%);
+        transition: transform 0.4s;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        &:after {
+            transform: skew(-30deg) translateX(-15%);
+        }
+    }
+}
+
+ol {
+  margin: 2rem;
+  padding: 0;
+
+  li {
+    @include chronicle-deck();
+    font-size: 1.8rem;
+    color: $dark-green;
+    letter-spacing: 0.11px;
+    line-height: 1.88;
+    margin: 0 0 1rem;
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+
+}

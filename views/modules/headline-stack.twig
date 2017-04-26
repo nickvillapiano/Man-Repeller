@@ -1,0 +1,16 @@
+<!-- Stack of four headlines -->
+
+<section class="Headline-stack">
+    {% if hasHeader %}
+        <div class="headline-stack-header">
+			<img class="flag" src="/images/icon-fire.png">
+			<span>People are talkin'</span>
+        </div>
+    {% endif %}
+    {% for headline in headlines %}
+        {% if hasImage and loop.first %}
+            <img src="images/image-recirc.jpg" alt="">
+        {% endif %}
+        <a href="#">{{ headline }}</a>
+    {% endfor %}
+</section>

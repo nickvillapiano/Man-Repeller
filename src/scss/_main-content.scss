@@ -1,0 +1,75 @@
+// _Main-content.scss
+
+.Main-content {
+    display: flex;
+
+
+    .Main-content__title {
+        @include knockout-50
+        font-size: 3.6rem;
+        color: $dark-green;
+        line-height: 1.5rem;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 4rem;
+        span {
+            position: relative;
+        }
+        .flag {
+            position: absolute;
+
+            width: 3rem;
+            height: 5.8rem;
+            top: -3rem;
+            left: -4.8rem;
+        }
+    }
+
+    // AR: Note, need to make this 100% to support
+    // the middle mini-podcast player's flex-grow
+    &.People-are-talkin {
+        width: 100%;
+        flex-direction: column;
+        margin: 5rem 0 0rem;
+    }
+
+    .three-up {
+        display: flex;
+        flex-grow: 1;
+        width: 100%;
+        margin-bottom: 6rem;
+
+        .Headline-stack,
+        .Side-ad {
+            max-width: 30rem;
+        }
+
+        @media only screen and (max-width: 1440px) {
+            .Headline-stack,
+            .Podcast-mini {
+                max-width: none;
+                width: 50%;
+            }
+            .Side-ad.has-featured-comment {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 766px) {
+            flex-direction: column;
+
+            .Headline-stack,
+            .Podcast-mini {
+                width: 100%;
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+
+    .Main-content {
+        flex-direction: column-reverse;
+    }
+}

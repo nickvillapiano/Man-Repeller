@@ -1,0 +1,43 @@
+<!-- Inline image -->
+
+<figure class="Inline-image {{class}} {% if hasLightbox %}lightbox-trigger{% endif %}">
+    <div class="image-wrapper">
+        <div class="zoom-icon">
+            <img src="images/zoom-gold.png" alt="FPO">
+        </div>
+        <img src="{{imgSrc}}" alt="FPO">
+        <div class="pinterest">
+            <img src="images/pinterest-gold.png" alt="FPO">
+        </div>
+    </div>
+    <figcaption>
+        {% if isEmpty %}
+        {% else %}
+            <div class="caption">
+                I've got hands in my pocket in this photo
+            </div>
+            <div class="shopping-links">
+                {{caption|raw}}
+            </div>
+            <div class="credits">
+                <i>Monocycle is edited by</i> Nicholas Quazzy Alexander, <i>Logo illustration by</i> Kelly Shami, <i>Photo by</i> David Lees via Getty Images.
+            </div>
+            <div class="caret">
+                <svg id="carat" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 7">
+                  <title>carat</title>
+                  <g id="Article">
+                    <g id="mr-article-desktop_Portrait" data-name="mr-article-desktop Portrait">
+                      <g id="body-_1" data-name="body-#1">
+                        <g id="no-circles">
+                          <g id="photo-info-expanded">
+                            <path id="arrow-right-copy-2" class="cls-1" d="M4.08,1.24C3.71,1.6,3.33,2,3,2.33a3.15,3.15,0,0,1-.43.39l-.07.06a11.48,11.48,0,0,1-1,1l-.52.56a6.57,6.57,0,0,1-.62.55,2.41,2.41,0,0,0-.26.24.23.23,0,0,0,0,.34l.79.77.63.61a.23.23,0,0,0,.34,0,5.18,5.18,0,0,1,.5-.52c.48-.46,1-.91,1.44-1.38a13.5,13.5,0,0,0,1-1c.17-.21.39-.38.56-.59,0,0,.09,0,.11,0,.22.22.49.37.7.6s.42.5.65.74c.66.72,1.39,1.37,2.08,2.06a1.19,1.19,0,0,0,.25.19c.11.06.22.11.33,0,.3-.34.7-.57,1-.89s.33-.37.51-.54a.15.15,0,0,0,0-.21A1.06,1.06,0,0,0,10.65,5a.28.28,0,0,1-.07-.07,2.1,2.1,0,0,0-.66-.6.69.69,0,0,1-.21-.23c-.08-.11-.2-.16-.27-.26s-.24-.28-.35-.42-.3-.29-.44-.44a.34.34,0,0,1-.06-.07.88.88,0,0,0-.32-.32c-.13-.09-.19-.23-.3-.33S7.83,2.1,7.76,2a7.52,7.52,0,0,1-1-.95l-1-1a.28.28,0,0,0-.41,0C5,.33,4.73.6,4.46.86l-.39.38h0" transform="translate(0 0)"/>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+            </div>
+        {% endif %}
+    </figcaption>
+</figure>

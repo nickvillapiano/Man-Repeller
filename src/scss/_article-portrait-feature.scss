@@ -1,0 +1,92 @@
+// _article-portrait-feature.scss
+
+.Article-portrait-feature {
+    background: rgba($navy, 0.02);
+
+    .border {
+
+        &:before {
+            border-color: $navy;
+        }
+    }
+
+    .border-accent {
+        border-color: $ruby;
+
+        &:before {
+            background: $ruby;
+        }
+
+        &:after {
+            background: $ruby;
+        }
+    }
+
+    .Paper-doll {
+
+        &:before {
+            background: $navy;
+        }
+    }
+
+    .Hero-header {
+        background: $navy;
+        width: calc(100% - 14rem);
+        margin: 5rem auto;
+        color: $white;
+        padding: 0;
+
+        &.reverse {
+            flex-direction: row-reverse;
+        }
+
+        @media only screen and (max-width: 767px) {
+            flex-direction: column;
+            margin: 2rem auto;
+            width: 100%;
+            padding: 2rem 0 0;
+            background: none;
+        }
+    }
+
+    .Hero-image {
+        width: initial;
+        max-width: 50%;
+        min-width: 45%;
+
+        img {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 767px) {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 400px) {
+            max-height: 40rem;
+            overflow: hidden;
+        }
+    }
+
+    .Hero-copy {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 4rem;
+        flex-shrink: 9999;
+
+        .meta {
+
+            .date {
+                color: $white;
+                border-color: $white;
+                opacity: 1;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            padding: 3rem 2rem;
+            background: $navy;
+        }
+    }
+}

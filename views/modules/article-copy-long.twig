@@ -1,0 +1,427 @@
+<!-- Article copy // Long -->
+
+{% include 'modules/slideshow-modal.twig' with { slides: articleLongSlideData } %}
+
+<section class="Article-copy">
+
+    <div class="left-rail">
+
+        {% if includeInlineSlideshow %}
+            {% include 'modules/inline-slideshow.twig'  with {
+                hasLightbox: true,
+                slides: slideData
+                }
+            %}
+        {% endif %}
+
+        {% if hasCallout %}
+            {% include 'modules/series-callout.twig' %}
+        {% else %}
+            <p class="preamble">
+               As is often the case when enjoyable activities are made mandatory, eating a new breakfast food every day for two weeks sounds more fun in theory. In reality, I spent a lot of time scrambling to come up with something (or somewhere) novel to eat between the hours of 8 and 9 a.m; a stark departure from my typical routine of toast plus egg, toast plus peanut butter, toast plus whatever’s within my reach. Early, it turns out, is not my most creative hour.
+            </p>
+        {% endif %}
+
+        <p>
+            My incompetence notwithstanding, the conclusions I drew from this breakfast experiment caught me off guard (in a good way). If you’ve ever kept a record of your meals, you’ll know the tracking tends to unveil patterns you didn’t set out to address. While I thought I was testing which breakfast foods made me feel best in terms of energy, mood and satiation, what I was really testing was how my food-related choices in the morning affected my food-related choices in the afternoon and evening. The answer, to my surprise, was a lot. In that sense, breakfast did ultimately prove to be the most important meal — as the adage goes — just not in the way I expected.
+        </p>
+        <p>
+            I’ve recorded my 15-day journey ad nauseum below. Read on at your precious time’s risk.
+        </p>
+        {% include 'modules/paragraph-break.twig' %}
+
+        <p class="article-header">
+            Day 1: Wheat toast with peanut butter
+        </p>
+
+        {% include 'modules/inline-image.twig' with
+            {
+
+                hasLightbox: true,
+                imgSrc: "images/breakfast1.jpg",
+                isEmpty: true
+            }
+        %}
+
+        <p>
+            What? I had to have a control day! I ate this at 8:30 a.m., was weirdly hungry again an hour later (just a blip, it faded) and then proceeded to not have time to eat for five more hours. My energy levels were okay, but by 2:30 I was ravenous. Lunch was soup, bread and an apple (time crunch); by 5:30, my energy plummeted again. It was early to eat dinner but I ran out and got a hearty salad from Sweetgreen. I felt better after eating it, but my mood and drive were just…down. I spent the next few hours hoping my plans would get cancelled so I could go home. (They did and I never regained my energy.)
+        </p>
+
+        <p>
+            This was a domino effect.
+        </p>
+
+        <p class="article-header">
+            Day 2: A KIND bar (oops)
+        </p>
+
+        <p>
+            This was worse than the toast — it was chocolate-chip flavor, lol, so basically candy — and even more indicative of my laziness. Four bites scarfed on the train at 9 a.m. left me wholly unsatisfied but did curb my hunger, for what it’s worth. I got hungry around 1 p.m. and opted for a chicken, apple and hummus sandwich. I was really hungry again around 4, but didn’t feel sugar-crazed or anything, which was probably because my lunch actually satisfied me.
+        </p>
+
+        <p>
+            Later, I ate a big dinner, but eating a heartier lunch right when I got hungry (versus waiting like yesterday) set me up for a better day.
+        </p>
+
+        <p class="article-header">
+            Day 3: Greek yogurt with fruit and granola
+        </p>
+
+        {% include 'modules/inline-image.twig' with
+            {
+
+                hasLightbox: true,
+                imgSrc: "images/breakfast2.jpg",
+                isEmpty: true
+            }
+        %}
+
+        <p>
+            I ate this at 10 a.m. It was delicious and A LOT. I’m realizing there are three distinct ways a meal can make me feel: 1) no longer hungry 2) satisfied 3) full and I’m still not sure which is best for the purpose of breakfast. This time it was #3. I thought that meant it would carry me through, but I was just as hungry as usual by 1 p.m. Hm. I continued to be hungry all afternoon, even after eating lunch.
+        </p>
+
+        <p>
+            Not a fan of how this big breakfast made me feel. I expected it to pull more weight.
+        </p>
+
+        <p class="article-header">
+            Day 4: Two scrambled eggs with wheat toast
+        </p>
+
+        {% include 'modules/inline-image.twig' with
+            {
+
+                hasLightbox: true,
+                imgSrc: "images/breakfast3.jpg",
+                isEmpty: true
+            }
+        %}
+
+        <p>
+            I ate this at 8:30 a.m. and loved it, as eggs on toast is part of my personal brand. This left me satisfied, but not full per se. Which I liked. Until I was hungry two hours later (prob because I skipped coffee, was stressed and just wanted something) and had a second breakfast (Greek yogurt with Kashi). Then I was hungry again by 1 p.m.! I ate soup and bread and proceeded to feel snacky all afternoon. Blah.
+        </p>
+
+        <p>
+            This set me on a weird path. My course correcting with the small lunch failed.
+        </p>
+
+        <p class="article-header">
+            Day 5: Acai bowl
+        </p>
+
+        <p>
+            I’m a freak for acai. I didn’t have time to eat this until 11:30 a.m., so I started my day with a coffee on an empty stomach, which made me jittery and took care of my appetite. Caffeine = a full-on drug. This acai bowl, which I forgot to photograph, was 11 fucking dollars. I ate it angrily/joyously. It had fruit and nuts and it made me extremely full. I started getting hungry around 2, but had a meeting, at which point my hunger curiously dissipated. I ate a hearty salad at 4:30 p.m. and a small, late dinner.
+        </p>
+
+        <p>
+            I liked starting with a filling/delicious breakfast like this; it helped me eat more intuitively because I was sated.
+        </p>
+
+        <p class="article-header">
+            Day 6: Avocado toast
+        </p>
+
+        {% include 'modules/inline-image.twig' with
+            {
+                hasLightbox: true,
+                imgSrc: "images/breakfast4.jpg",
+                isEmpty: true
+            }
+        %}
+
+        <p>
+            I didn’t eat this until 12:30 p.m. because it was Saturday and I spent the first three hours of the day finishing Cat Marnell’s new book. I think the fat in the avo really helped, as I wasn’t hungry for a snack until 3 p.m. But then I had a huge pasta dinner at 8 p.m. because I’d barely eaten and my energy wasn’t high enough to make a better choice. COOL. In hindsight I should have eaten a real lunch (despite not being that hungry) and avoided the dinner blow out.
+        </p>
+
+        <p>
+            This was a good choice ruined by bad weekend timing.
+        </p>
+
+        <p class="article-header">
+            Day 7: Croissant
+        </p>
+        <p>
+            What the French eat! Très chic! I felt pretty terrible eating this first thing. It seems so empty and worthless as a breakfast food. It took care of my hunger at 10 a.m., but left me very unsatisfied and definitely not full. (Omg croissants are so good btw.) Oops: I ate a massive curry at 2 p.m. because I was about to faint. I def overdid it at lunch because of the insubstantial breakfast, then had a smallish dinner at home, plus some healthy snacks.
+        </p>
+
+        <p>
+            Oddly enough, having a big lunch actually helped me make better decisions at night. Hmm…
+        </p>
+
+        <p class="article-header">
+            Day 8: Overnight oatmeal
+        </p>
+
+        {% include 'modules/inline-image.twig' with
+            {
+                hasLightbox: true,
+                imgSrc: "images/breakfast5.jpg",
+                isEmpty: true
+            }
+        %}
+
+        <p>
+            I ate this gorgeous meal at 10 a.m. (It’s “the classic” — rolled oats, skim milk, Greek yogurt, chia and honey). BOY DID THIS MAKE ME FULL. Omg. In the afternoon, I ate some trail mix and two dumplings but honestly never worked up an appetite for lunch. In fact, I wasn’t hungry again the whole day. It was kind of annoying. Because I wanted to eat? But impressive! Wow!
+        </p>
+
+        <p>
+            Too bad I hated the taste and low-key never want to eat overnight oats again.
+        </p>
+
+        <p class="article-header">
+            Day 9: Grapefruit
+        </p>
+
+        <p>
+            I really wanted a bigger breakfast, but I’m a journalist! Knowing a grapefruit would leave me wanting, I started my day with an empty-stomach coffee, which I know sounds irresponsible. Oh well. Anyway, I ate the grapefruit (with some sugar because I’m not a monster) at 10 a.m. I felt vaguely satisfied, keyword “vaguely.” An hour later I felt not great and had to eat some nuts. I got soup at 1:30 p.m. (which wasn’t enough) and proceeded to feel snacky and low-energy all afternoon.
+        </p>
+
+        <p>
+            A tiny breakfast didn’t really work. Also, it tasted nothing like grapes. JK.
+        </p>
+
+        <p class="article-header">
+            Day 10: Bacon, egg and cheese
+        </p>
+
+        {% include 'modules/inline-image.twig' with
+            {
+                hasLightbox: true,
+                imgSrc: "images/breakfast6.jpg",
+                isEmpty: true
+            }
+        %}
+
+        <p>
+            Hooboy! I was not looking forward to this one. And rightly so: It was really good, yes, but hit me like a tranquilizer dart. I ate it at 9 a.m. and was super hungry by 11 a.m. Pardonnez-moi?! Worse breakfast ever! Luckily, I had an apple handy — fiber for my fiberless digestive system. This BEC opened up a monster in me. I just wanted to eat all day, actual hunger notwithstanding. I had soup for lunch and a hearty dinner and then a bowl of cereal at 11 p.m. WTF.
+        </p>
+        <p>
+            Don’t do this. It was bad.
+        </p>
+
+        <p class="article-header">
+            Day 11: Cereal
+        </p>
+
+        <p>
+            Starting the day with cereal satisfied both my laziness and taste buds, but set me up to be hungry all day. An hour later, I wanted lunch. An hour after that, I wanted lunch #2. No matter what I ate, I just wanted more. Cereal is weird. It’s indulgent-tasting while also maintaining the illusion of being light-ish, so my brain is turned on (sugar!) and my mind is like, “I’ve barely eaten!”
+        </p>
+
+        <p>
+            Listen. I’m not a scientist. But cereal didn’t do me right.
+        </p>
+
+        <p class="article-header">
+            Day 12: Chia pudding
+        </p>
+
+        {% include 'modules/inline-image.twig' with
+            {
+                hasLightbox: true,
+                imgSrc: "images/breakfast7.jpg",
+                isEmpty: true
+            }
+        %}
+
+        <p>
+            I know this chia pudding looks good, but it tasted like room-temperature cement. It was an abomination. The cool thing about eating something you don’t like that much is you actually stop the very moment you’re satisfied. What a concept! Similar to the overnight oats and the avo toast, the chia had me so full all day that I only had a snack in the afternoon (mistake) and then made a hunger-driven decision at dinner.
+        </p>
+        <p>
+            I’m noticing that when my breakfasts are too filling, they mess with my lunch and then I overdo it at dinner.
+        </p>
+
+        <p class="article-header">
+            Day 13: Instant oatmeal
+        </p>
+
+        {% include 'modules/inline-image.twig' with
+            {
+                hasLightbox: true,
+                imgSrc: "images/breakfast8.jpg",
+                isEmpty: true
+            }
+        %}
+
+        <p>
+            I was told this looks like potpourri, so let me explain: It’s instant oatmeal with a dollop of peanut butter, a dollop of Daisy (kidding, it’s Greek yogurt), trail mix, dried cranberries and really bad Kashi cereal that tastes like cardboard.
+        </p>
+        <p>
+            I woke up really hungry and had no time, so I essentially emptied the contents of my pantry into this bowl. I eat oatmeal often though, so this was familiar territory. One fun tidbit: I had to scoop the Greek yogurt out after one bite because it tasted rotten. 🙂 This got me to lunch fine. I was medium hungry at a normal time, so I ate some soup (surprise). Later, I got home and ate a too-small dinner and then snacked on a bunch of garbage while working/trying to ignore the Gossip Girl marathon my roommate is currently running.
+        </p>
+        <p>
+            What’s wrong with me?
+        </p>
+
+        <p class="article-header">
+            Day 14: Apple
+        </p>
+
+        <p>
+            I had no time to eat. I expected hunger pains but they never came, probably because I drank coffee. To my credit, I was also drinking a ton of water (I’ve realized through this how often my hunger is just thirst). For lunch, I had a hearty salad around 2 p.m., some snacks throughout the afternoon and a healthy dinner at a normal time.
+        </p>
+        <p>
+            WHOA. This was a revelation. The difference here from grapefruit day was that I followed the fruit with a filling and healthy lunch (i.e. not soup) which set a good tone for the afternoon and evening.
+        </p>
+
+        <p class="article-header">
+            Day 15: Salad (nightmare)
+        </p>
+
+        {% include 'modules/inline-image.twig' with
+            {
+                hasLightbox: true,
+                imgSrc: "images/breakfast9.jpg",
+                isEmpty: true
+            }
+        %}
+
+        <p>
+            Trying to buy a salad at 9:30 A.M. and being turned down is curiously humiliating, but my editor Leslie swears by eating lunch foods for breakfast and I was determined. Ultimately I had to wait until Sweetgreen opened to order my breakfast salad, which is not a phrase I intend to utter again as I very much did not enjoy eating kale and chicken at the crack of dawn (okay, it was 11 A.M.). Around 1 I got hungry again (wtf), but I couldn’t really justify another lunch, so I spent the rest of the afternoon in a vaguely insatiable state, with access to unhelpful snacks (tiny British candy and very old nuts) that I ate anyway. By dinner, I was the definition of dragging, so I ordered a wrap on Seamless and practically waited by the door for 40 minutes, tail wagging.
+        </p>
+
+        <p>
+            I hated only eating two big meals — so boring and with a valley of hunger between them!
+        </p>
+
+        <p class="article-header">
+            Conclusions
+        </p>
+
+        <ol>
+            <li>
+                The biggies (overnight oats, avocado toast, chia pudding, acai bowl) were genuinely filling. Maybe too filling, because they made me skip lunch and consequently blow it on dinner.
+            </li>
+            <li>
+                The tinies (apple, grapefruit, KIND bar) actually weren’t so bad for me — as long as I ate them later in the morning with coffee, and then followed them with a solid lunch. Too small of a lunch after a non-breakfast put me in a bad way.
+            </li>
+            <li>
+                The nasties (croissant, BEC, cereal) weren’t ideal. They messed up my hunger signals and left me flailing.
+            </li>
+            <li>
+                The classics (peanut butter toast, eggs on toast, instant oatmeal, yogurt and granola) were more predictable. They satisfied me enough, but didn’t get me very far satiation-wise nor lead me to make the smartest lunch decisions.
+            </li>
+        </ol>
+
+
+        <p class="article-header">
+            Takeaways!
+        </p>
+
+        <ol>
+            <li>
+                I eat better and feel better when I push my breakfast back to the late morning. My “course correcting,” i.e. a small lunch to make up for an unhealthy breakfast, almost always failed me. It’s not an effective approach.
+            </li>
+            <li>
+                Not all of my hunger signals are actual hunger and a lot of them went away when I drank water or got distracted by a meeting.
+            </li>
+            <li>
+                The nasties (croissant, BEC, cereal) weren’t ideal. They messed up my hunger signals and left me flailing.
+            </li>
+            <li>
+                Eating two small meals for breakfast and lunch (or a big breakfast and a non-lunch) lead to irresponsible snacking and/or dinner decisions. Meanwhile, eating until I was satisfied (versus full) makes it easier for me to read my hunger signals later. And eating merely to abate hunger only works for 20 minutes, tops.
+            </li>
+            <li>
+                I should probably stop eating so much soup.
+            </li>
+            <li>
+                This experiment was expensive as fuq.
+            </li>
+        </ol>
+
+        <p>
+            The good news is I learned a lot! The bad news is I have no fucking idea what to eat for breakfast tomorrow.
+            {% include 'modules/endmark.twig' %}
+        </p>
+
+        {% include 'modules/pdf.twig' with
+            {
+                imgSrc: "images/icons/margarita.png",
+
+                linkCopy: "Now that you're hungry...some frosty 'ritas"
+            }
+        %}
+
+        {% include 'modules/article-bottom.twig' %}
+
+        {% include 'modules/tag-share.twig' %}
+
+    </div>
+    <div class="right-rail slidingRail" id="right-rail">
+        {% if is250 %}
+            <div class="rail-slider-wrapper">
+                <div class="rail-slider-content">
+                {% include 'modules/side-ad.twig' with
+                    {
+                        adSrc: "images/side-ad-250.jpg",
+                        adSrcMobile: "images/side-ad-mobile.jpg"
+                    }
+                %}
+                {% include 'modules/side-share.twig' %}
+                </div>
+            </div>
+        {% elseif isMultiRail %}
+
+            <div class="rail-slider-wrapper">
+                <div class="rail-slider-content">
+                    {% include 'modules/side-ad.twig' with
+                        {
+                            adSrc: "images/side-ad.jpg",
+                            adSrcMobile: "images/side-ad-mobile.jpg"
+                        }
+                    %}
+                    {% include 'modules/side-share.twig' %}
+                </div>
+            </div>
+            <div class="rail-slider-wrapper">
+                <div class="rail-slider-content">
+                    {% include 'modules/headline-stack.twig' with
+                        {
+                            hasHeader: true,
+                            hasImage: true,
+                            headlines: [
+                                "Chrissy Teigen likes her stretch marks",
+                                "I’m Not Technically Shopping in January But…Should I Buy This?",
+                                "How to Fake Cool",
+                                "Delete These Photos Off Your Phone ASAP!"
+                            ]
+                        }
+                    %}
+                    {% include 'modules/side-share.twig' %}
+                </div>
+            </div>
+            <div class="rail-slider-wrapper">
+                <div class="rail-slider-content">
+                    {% include 'modules/side-ad.twig' with
+                        {
+                            adSrc: "images/side-ad.png",
+                            adSrcMobile: "images/side-ad-mobile.jpg"
+                        }
+                    %}
+                    {% include 'modules/side-share.twig' %}
+                </div>
+            </div>
+        {% else %}
+            <div class="rail-slider-wrapper">
+                <div class="rail-slider-content">
+                {% include 'modules/side-ad.twig' with
+                    {
+                        adSrc: "images/side-ad.jpg",
+                        adSrcMobile: "images/side-ad-mobile.jpg"
+                    }
+                %}
+                {% include 'modules/side-share.twig' %}
+                </div>
+            </div>
+        {% endif %}
+
+    </div>
+</section>
+<div class="recirc-and-comments">
+    <div class="next-steps">
+        <img src="images/spotim-3up.png">
+    </div>
+
+    <div class="comments">
+        <img src="images/spotim-comments.png">
+    </div>
+</div>

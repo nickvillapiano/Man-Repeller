@@ -1,0 +1,60 @@
+// Checkboxes
+.checkbox {
+    margin: .5rem;
+    //
+    @include knockout-50();
+    text-transform: uppercase;
+    color: $dark-green;
+
+    label {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 1.6rem;
+    }
+    input[type="checkbox"] {
+        background-color: $white;
+        cursor: pointer;
+        display: inline-block;
+        height: 2.4rem;
+        width: 2.4rem;
+        margin-right: 1rem;
+        position: relative;
+        border: .2rem solid $dark-green;
+        -webkit-appearance: none;
+
+        &:focus {
+            // background-color: $gold;
+            // border: .2rem solid $gold;
+
+            // reset the grey outline
+            outline: thin dotted;
+            outline: 0;
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            background-color: $grey;
+            border: .2rem solid $grey;
+        }
+
+        &:checked {
+            border: .2rem solid $gold;
+            background-color: $gold;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 1.6rem;
+                height: 1rem;
+                background: rgba(0, 0, 0, 0);
+                top: .2rem;
+                left: .2rem;
+                border: .4rem solid $white;
+                border-top: none;
+                border-right: none;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

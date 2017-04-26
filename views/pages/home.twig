@@ -1,0 +1,937 @@
+{% extends 'layouts/layout.twig' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+	{% include 'modules/large-ad.twig' with
+		{
+			imgSrc: "images/big-ad.jpg"
+		}
+	%}
+
+	<div class="border">
+
+		<div class="content-wrapper">
+
+			<div class="Hero-content">
+
+				{% include 'shared/nav.twig' with
+					{
+						isHome: true,
+						isHeader: true
+					}
+				%}
+
+				{% include 'modules/featured-articles.twig' with
+					{
+						isHome: true,
+						class: "left"
+					}
+				%}
+
+			</div>
+
+			<!-- Four Two -->
+			<div class="Main-content">
+
+				<div class="Left-rail">
+
+					<div class="four-up">
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article1.jpg",
+						        headline: "Real Cool People, Real Cool Apartments: Kat Typaldos",
+						        byline: "Amelia Diamond",
+						        dek: "CHECK OUT THE TWO-BEDROOM HOME OF THE NYC-BASED STYLIST",
+						        hasFlair: true,
+						        flairSrc: "images/icons/thoughts.png"
+						    }
+						%}
+
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article2.jpg",
+						        headline: "Is “No Hair Color” the New “No Makeup?”",
+						        byline: "Haley Nahman",
+
+						        hasFlair: false,
+						        flairSrc: "images/icons/phone.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article3.jpg",
+						        headline: "6 Things I Gave Up When I Moved to New York",
+						        byline: "Emily Zirimis",
+						        dek: "",
+						        hasFlag: false,
+						        flagSrc1: "images/green-mouth.png",
+								flagSrc2: "images/pink-mouth.png",
+								flagTitle: "Making Noise",
+								hasFlair: true,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article4.jpg",
+						        headline: "10 Works of Black Literature America Needs Right Now",
+						        byline: "R. Eric Thomas",
+						        hasDek: true,
+						        dek: "I now realize that beauty is an infinite, abundant matter.",
+						        hasFlair: false,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+					</div>
+
+					<div class="two-up">
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article5.jpg",
+						        headline: "What Your Parents’ Divorce Means for Your Relationships",
+						        byline: "Helena Bala",
+						        hasDek: true,
+						        dek: "Will the past repeat itself?",
+						        hasFlair: true,
+						        flairSrc: "images/icons/thoughts.png"
+						    }
+						%}
+
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article6.jpg",
+						        headline: "I’m a Woman Who Likes Sports:&nbsp;SO?",
+						        byline: "Jenna Gottlieb",
+						        hasDek: true,
+						        dek: "Why can't liking sports just make me a sports fan?",
+						        hasFlair: false,
+						        flairSrc: "images/icons/phone.png"
+						    }
+						%}
+					</div>
+
+				</div>
+
+				<div class="Right-rail">
+
+					{% include 'modules/side-ad.twig' with
+						{
+							isHome: true,
+							adSrc: "images/side-ad.png",
+							adSrcMobile: "images/side-ad-mobile.jpg",
+							hasFeaturedComment: false
+						}
+					%}
+
+				</div>
+
+			</div>
+
+			<div class="Main-content People-are-talkin">
+
+				<div class="Main-content__title">
+					<span>
+						<img class="flag" src="/images/icon-fire.png" />
+						People are talkin'
+					</span>
+				</div>
+
+				<div class="three-up">
+					{% include 'modules/headline-stack.twig' with
+						{
+							headlines: [
+								"Chrissy Teigen likes her stretch marks",
+								"I’m Not Technically Shopping in January But…Should I Buy This?",
+								"How to Fake Cool",
+								"Delete These Photos Off Your Phone ASAP!"
+							]
+						}
+					%}
+
+					{% include 'modules/podcast-mini.twig' with
+						{
+							episodeNumber: 48,
+							title: "Commit to Not Committing",
+							author: "Leandra Medine",
+							date: "1.27.17"
+						}
+					%}
+
+					{% include 'modules/side-ad.twig' with
+						{
+							isHome: true,
+							adSrc: "images/side-ad.png",
+							hasFeaturedComment: true
+						}
+					%}
+
+				</div>
+
+			</div>
+
+			<!-- Feature Four -->
+			<div class="Main-content">
+
+				<div class="Left-rail">
+
+
+					{% include 'modules/portrait-feature.twig' with
+					    {
+					    	imgSrc: "images/paltrow.png",
+					    	headline: "The Gwyneth Paltrow MR Chatroom",
+					    	hasDek: false,
+					    	dek: "MR Chatroom",
+					    	byline: "Leandra Medine",
+					    	class: "left normal-feature",
+					    	hasFlag: true,
+					        flagSrc1: "images/trophy1.png",
+					        flagSrc2: "images/trophy2.png",
+					        flagTitle: "MR Hall of Fame"
+					    }
+					%}
+
+					<div class="four-up">
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article7.jpg",
+						        headline: "4 People Living and Thriving on the Gender Spectrum",
+						        byline: "Haley Nahman",
+						        dek: "When President Obama emerged last night in the city of blinding lights, his hometown of Chicago, he greeted an audience who wore their feelings on their sleeves",
+						        hasFlair: true,
+						        flairSrc: "images/icons/thoughts.png"
+						    }
+						%}
+
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article8.jpg",
+						        headline: "Everything to Expect in the Year of the Fire Rooster",
+						        byline: "Amelia Diamond",
+
+						        hasFlair: false,
+						        flairSrc: "images/icons/phone.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article9.jpg",
+						        headline: "Mansur Gavriel is Making Clothes. Get Ready for Waitlists!",
+						        byline: "Haley Nahman",
+						        dek: "",
+						        hasFlag: false,
+						        flagSrc1: "images/green-mouth.png",
+								flagSrc2: "images/pink-mouth.png",
+								flagTitle: "Making Noise",
+								hasFlair: true,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article10.jpg",
+						        headline: "Mary Tyler Moore’s Legacy is More Important Than Ever",
+						        byline: "Harling Ross",
+						        hasDek: true,
+						        dek: "I now realize that beauty is an infinite, abundant matter.",
+						        hasFlair: false,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+					</div>
+
+					<div class="three-up">
+
+
+					</div>
+
+				</div>
+
+				<div class="Right-rail">
+
+					{% include 'modules/side-ad.twig' with
+						{
+							isHome: true,
+							adSrc: "images/side-ad.jpg",
+							adSrcMobile: "images/side-ad-mobile.jpg",
+							hasFeaturedComment: false
+						}
+					%}
+
+				</div>
+
+			</div>
+
+			{% include 'modules/manstagram-module.twig' %}
+
+			<div class="Main-content">
+
+				<div class="Left-rail">
+
+					<div class="four-up">
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article1.jpg",
+						        headline: "Real Cool People, Real Cool Apartments: Kat Typaldos",
+						        byline: "Amelia Diamond",
+						        dek: "CHECK OUT THE TWO-BEDROOM HOME OF THE NYC-BASED STYLIST",
+						        hasFlair: true,
+						        flairSrc: "images/icons/thoughts.png"
+						    }
+						%}
+
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article2.jpg",
+						        headline: "Is “No Hair Color” the New “No Makeup?”",
+						        byline: "Haley Nahman",
+
+						        hasFlair: false,
+						        flairSrc: "images/icons/phone.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article3.jpg",
+						        headline: "6 Things I Gave Up When I Moved to New York",
+						        byline: "Emily Zirimis",
+						        dek: "",
+						        hasFlag: false,
+						        flagSrc1: "images/green-mouth.png",
+								flagSrc2: "images/pink-mouth.png",
+								flagTitle: "Making Noise",
+								hasFlair: true,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article4.jpg",
+						        headline: "10 Works of Black Literature America Needs Right Now",
+						        byline: "R. Eric Thomas",
+						        hasDek: true,
+						        dek: "I now realize that beauty is an infinite, abundant matter.",
+						        hasFlair: false,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+					</div>
+
+					<div class="two-up">
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article5.jpg",
+						        headline: "What Your Parents’ Divorce Means for Your Relationships",
+						        byline: "Helena Bala",
+						        hasDek: true,
+						        dek: "Will the past repeat itself?",
+						        hasFlair: true,
+						        flairSrc: "images/icons/thoughts.png"
+						    }
+						%}
+
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article6.jpg",
+						        headline: "I’m a Woman Who Likes Sports:&nbsp;SO?",
+						        byline: "Jenna Gottlieb",
+						        hasDek: true,
+						        dek: "Why can't liking sports just make me a sports fan?",
+						        hasFlair: false,
+						        flairSrc: "images/icons/phone.png"
+						    }
+						%}
+					</div>
+
+				</div>
+
+				<div class="Right-rail">
+
+					{% include 'modules/side-ad.twig' with
+						{
+							isHome: true,
+							adSrc: "images/side-ad.png",
+							adSrcMobile: "images/side-ad-mobile.jpg",
+							hasFeaturedComment: false
+						}
+					%}
+
+				</div>
+
+			</div>
+
+            {% include 'modules/inline-shopping.twig' with
+                {
+                    isHome: true,
+                    title: "Not Spring, Not Not Spring"
+                }
+            %}
+
+			<div class="Main-content">
+
+				<div class="Left-rail">
+
+
+					{% include 'modules/portrait-feature.twig' with
+					    {
+					    	imgSrc: "images/paltrow.png",
+					    	headline: "The Gwyneth Paltrow MR Chatroom",
+					    	hasDek: false,
+					    	dek: "MR Chatroom",
+					    	byline: "Leandra Medine",
+					    	class: "left normal-feature",
+					    	hasFlag: true,
+					        flagSrc1: "images/trophy1.png",
+					        flagSrc2: "images/trophy2.png",
+					        flagTitle: "MR Hall of Fame"
+					    }
+					%}
+
+					<div class="four-up">
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article7.jpg",
+						        headline: "4 People Living and Thriving on the Gender Spectrum",
+						        byline: "Haley Nahman",
+						        dek: "When President Obama emerged last night in the city of blinding lights, his hometown of Chicago, he greeted an audience who wore their feelings on their sleeves",
+						        hasFlair: true,
+						        flairSrc: "images/icons/thoughts.png"
+						    }
+						%}
+
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article8.jpg",
+						        headline: "Everything to Expect in the Year of the Fire Rooster",
+						        byline: "Amelia Diamond",
+
+						        hasFlair: false,
+						        flairSrc: "images/icons/phone.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article9.jpg",
+						        headline: "Mansur Gavriel is Making Clothes. Get Ready for Waitlists!",
+						        byline: "Haley Nahman",
+						        dek: "",
+						        hasFlag: false,
+						        flagSrc1: "images/green-mouth.png",
+								flagSrc2: "images/pink-mouth.png",
+								flagTitle: "Making Noise",
+								hasFlair: true,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article10.jpg",
+						        headline: "Mary Tyler Moore’s Legacy is More Important Than Ever",
+						        byline: "Harling Ross",
+						        hasDek: true,
+						        dek: "I now realize that beauty is an infinite, abundant matter.",
+						        hasFlair: false,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+					</div>
+
+					<div class="three-up">
+
+
+					</div>
+
+				</div>
+
+				<div class="Right-rail">
+
+					{% include 'modules/side-ad.twig' with
+						{
+							isHome: true,
+							adSrc: "images/side-ad.jpg",
+							adSrcMobile: "images/side-ad-mobile.jpg",
+							hasFeaturedComment: false
+						}
+					%}
+
+				</div>
+
+			</div>
+
+			{% include 'modules/lookbook-module.twig' with
+			    {
+
+			    }
+			%}
+
+			{% include 'modules/more-button.twig' with
+				{
+				}
+			%}
+
+			<!-- Feature Four -->
+			<div class="Main-content">
+
+				<div class="Left-rail">
+
+
+					{% include 'modules/portrait-feature.twig' with
+					    {
+					    	imgSrc: "images/paltrow.png",
+					    	headline: "The Gwyneth Paltrow MR Chatroom",
+					    	hasDek: false,
+					    	dek: "MR Chatroom",
+					    	byline: "Leandra Medine",
+					    	class: "left normal-feature",
+					    	hasFlag: true,
+					        flagSrc1: "images/trophy1.png",
+					        flagSrc2: "images/trophy2.png",
+					        flagTitle: "MR Hall of Fame"
+					    }
+					%}
+
+					<div class="four-up">
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article7.jpg",
+						        headline: "4 People Living and Thriving on the Gender Spectrum",
+						        byline: "Haley Nahman",
+						        dek: "When President Obama emerged last night in the city of blinding lights, his hometown of Chicago, he greeted an audience who wore their feelings on their sleeves",
+						        hasFlair: true,
+						        flairSrc: "images/icons/thoughts.png"
+						    }
+						%}
+
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article8.jpg",
+						        headline: "Everything to Expect in the Year of the Fire Rooster",
+						        byline: "Amelia Diamond",
+
+						        hasFlair: false,
+						        flairSrc: "images/icons/phone.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article9.jpg",
+						        headline: "Mansur Gavriel is Making Clothes. Get Ready for Waitlists!",
+						        byline: "Haley Nahman",
+						        dek: "",
+						        hasFlag: false,
+						        flagSrc1: "images/green-mouth.png",
+								flagSrc2: "images/pink-mouth.png",
+								flagTitle: "Making Noise",
+								hasFlair: true,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article10.jpg",
+						        headline: "Mary Tyler Moore’s Legacy is More Important Than Ever",
+						        byline: "Harling Ross",
+						        hasDek: true,
+						        dek: "I now realize that beauty is an infinite, abundant matter.",
+						        hasFlair: false,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+					</div>
+
+					<div class="three-up">
+
+
+					</div>
+
+				</div>
+
+				<div class="Right-rail">
+
+					{% include 'modules/side-ad.twig' with
+						{
+							isHome: true,
+							adSrc: "images/side-ad.jpg",
+							adSrcMobile: "images/side-ad-mobile.jpg",
+							hasFeaturedComment: false
+						}
+					%}
+
+				</div>
+
+			</div>
+
+			<!-- Four Two -->
+			<div class="Main-content">
+
+				<div class="Left-rail">
+
+					<div class="four-up">
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article1.jpg",
+						        headline: "Real Cool People, Real Cool Apartments: Kat Typaldos",
+						        byline: "Amelia Diamond",
+						        dek: "CHECK OUT THE TWO-BEDROOM HOME OF THE NYC-BASED STYLIST",
+						        hasFlair: true,
+						        flairSrc: "images/icons/thoughts.png"
+						    }
+						%}
+
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article2.jpg",
+						        headline: "Is “No Hair Color” the New “No Makeup?”",
+						        byline: "Haley Nahman",
+
+						        hasFlair: false,
+						        flairSrc: "images/icons/phone.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article3.jpg",
+						        headline: "6 Things I Gave Up When I Moved to New York",
+						        byline: "Emily Zirimis",
+						        dek: "",
+						        hasFlag: false,
+						        flagSrc1: "images/green-mouth.png",
+								flagSrc2: "images/pink-mouth.png",
+								flagTitle: "Making Noise",
+								hasFlair: true,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article4.jpg",
+						        headline: "10 Works of Black Literature America Needs Right Now",
+						        byline: "R. Eric Thomas",
+						        hasDek: true,
+						        dek: "I now realize that beauty is an infinite, abundant matter.",
+						        hasFlair: false,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+					</div>
+
+					<div class="two-up">
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article5.jpg",
+						        headline: "What Your Parents’ Divorce Means for Your Relationships",
+						        byline: "Helena Bala",
+						        hasDek: true,
+						        dek: "Will the past repeat itself?",
+						        hasFlair: true,
+						        flairSrc: "images/icons/thoughts.png"
+						    }
+						%}
+
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article6.jpg",
+						        headline: "I’m a Woman Who Likes Sports:&nbsp;SO?",
+						        byline: "Jenna Gottlieb",
+						        hasDek: true,
+						        dek: "Why can't liking sports just make me a sports fan?",
+						        hasFlair: false,
+						        flairSrc: "images/icons/phone.png"
+						    }
+						%}
+					</div>
+
+				</div>
+
+				<div class="Right-rail">
+
+					{% include 'modules/side-ad.twig' with
+						{
+							isHome: true,
+							adSrc: "images/side-ad.png",
+							adSrcMobile: "images/side-ad-mobile.jpg",
+							hasFeaturedComment: false
+						}
+					%}
+
+				</div>
+
+			</div>
+
+			{% include 'modules/more-button.twig' %}
+
+			<!-- Feature Four -->
+			<div class="Main-content">
+
+				<div class="Left-rail">
+
+
+					{% include 'modules/portrait-feature.twig' with
+					    {
+					    	imgSrc: "images/paltrow.png",
+					    	headline: "The Gwyneth Paltrow MR Chatroom",
+					    	hasDek: false,
+					    	dek: "MR Chatroom",
+					    	byline: "Leandra Medine",
+					    	class: "left normal-feature",
+					    	hasFlag: true,
+					        flagSrc1: "images/trophy1.png",
+					        flagSrc2: "images/trophy2.png",
+					        flagTitle: "MR Hall of Fame"
+					    }
+					%}
+
+					<div class="four-up">
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article7.jpg",
+						        headline: "4 People Living and Thriving on the Gender Spectrum",
+						        byline: "Haley Nahman",
+						        dek: "When President Obama emerged last night in the city of blinding lights, his hometown of Chicago, he greeted an audience who wore their feelings on their sleeves",
+						        hasFlair: true,
+						        flairSrc: "images/icons/thoughts.png"
+						    }
+						%}
+
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article8.jpg",
+						        headline: "Everything to Expect in the Year of the Fire Rooster",
+						        byline: "Amelia Diamond",
+
+						        hasFlair: false,
+						        flairSrc: "images/icons/phone.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article9.jpg",
+						        headline: "Mansur Gavriel is Making Clothes. Get Ready for Waitlists!",
+						        byline: "Haley Nahman",
+						        dek: "",
+						        hasFlag: false,
+						        flagSrc1: "images/green-mouth.png",
+								flagSrc2: "images/pink-mouth.png",
+								flagTitle: "Making Noise",
+								hasFlair: true,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article10.jpg",
+						        headline: "Mary Tyler Moore’s Legacy is More Important Than Ever",
+						        byline: "Harling Ross",
+						        hasDek: true,
+						        dek: "I now realize that beauty is an infinite, abundant matter.",
+						        hasFlair: false,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+					</div>
+
+					<div class="three-up">
+
+
+					</div>
+
+				</div>
+
+				<div class="Right-rail">
+
+					{% include 'modules/side-ad.twig' with
+						{
+							isHome: true,
+							adSrc: "images/side-ad.jpg",
+							adSrcMobile: "images/side-ad-mobile.jpg",
+							hasFeaturedComment: false
+						}
+					%}
+
+				</div>
+
+			</div>
+
+			<!-- Four Two -->
+			<div class="Main-content">
+
+				<div class="Left-rail">
+
+					<div class="four-up">
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article1.jpg",
+						        headline: "Real Cool People, Real Cool Apartments: Kat Typaldos",
+						        byline: "Amelia Diamond",
+						        dek: "CHECK OUT THE TWO-BEDROOM HOME OF THE NYC-BASED STYLIST",
+						        hasFlair: true,
+						        flairSrc: "images/icons/thoughts.png"
+						    }
+						%}
+
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article2.jpg",
+						        headline: "Is “No Hair Color” the New “No Makeup?”",
+						        byline: "Haley Nahman",
+
+						        hasFlair: false,
+						        flairSrc: "images/icons/phone.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article3.jpg",
+						        headline: "6 Things I Gave Up When I Moved to New York",
+						        byline: "Emily Zirimis",
+						        dek: "",
+						        hasFlag: false,
+						        flagSrc1: "images/green-mouth.png",
+								flagSrc2: "images/pink-mouth.png",
+								flagTitle: "Making Noise",
+								hasFlair: true,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article4.jpg",
+						        headline: "10 Works of Black Literature America Needs Right Now",
+						        byline: "R. Eric Thomas",
+						        hasDek: true,
+						        dek: "I now realize that beauty is an infinite, abundant matter.",
+						        hasFlair: false,
+						        flairSrc: "images/icons/shoe.png"
+						    }
+						%}
+					</div>
+
+					<div class="two-up">
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article5.jpg",
+						        headline: "What Your Parents’ Divorce Means for Your Relationships",
+						        byline: "Helena Bala",
+						        hasDek: true,
+						        dek: "Will the past repeat itself?",
+						        hasFlair: true,
+						        flairSrc: "images/icons/thoughts.png"
+						    }
+						%}
+
+
+						{% include 'modules/feed-article.twig' with
+						    {
+						        class: "left",
+						        imgSrc: "images/article6.jpg",
+						        headline: "I’m a Woman Who Likes Sports:&nbsp;SO?",
+						        byline: "Jenna Gottlieb",
+						        hasDek: true,
+						        dek: "Why can't liking sports just make me a sports fan?",
+						        hasFlair: false,
+						        flairSrc: "images/icons/phone.png"
+						    }
+						%}
+					</div>
+
+				</div>
+
+				<div class="Right-rail">
+
+					{% include 'modules/side-ad.twig' with
+						{
+							isHome: true,
+							adSrc: "images/side-ad.png",
+							adSrcMobile: "images/side-ad-mobile.jpg",
+							hasFeaturedComment: false
+						}
+					%}
+
+				</div>
+
+			</div>
+
+			{% include 'modules/more-button.twig' with
+				{
+					class: "last"
+				}
+			%}
+
+			{% include 'shared/_footer.twig' %}
+
+		</div>
+
+	</div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

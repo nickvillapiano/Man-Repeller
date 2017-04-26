@@ -1,0 +1,57 @@
+// _manstagram-module.scss
+
+.Manstagram-module {
+    width: 100vw;
+    position: relative;
+    //
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 5rem;
+    padding: 2rem 0;
+    //
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+
+    &:before {
+        content: "";
+        height: 100%;
+        width: 50vw;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: -25vw;
+    }
+
+    .manstagram-logo {
+        margin: 0 1.5rem 0 0;
+
+        img {
+            max-width: 1.95rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .image-wrapper {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        img {
+            margin: 0 1.5rem 0 0;
+            max-width: 16rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

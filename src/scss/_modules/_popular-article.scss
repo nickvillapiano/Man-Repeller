@@ -1,0 +1,44 @@
+// _popular-article.scss
+
+.Popular-article {
+    position: relative;
+    z-index: 3;
+    width: 33.333%;
+    float: left;
+
+    img {
+        max-height: 20rem;
+    }
+
+    .meta {
+
+        .brand {
+            @include chronicle-semi;
+            font-size: 1.8rem;
+        }
+
+        .price {
+            @include knockout-30;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media only screen and (min-width: $max-width) {
+
+    .Popular-article {
+
+        .headline {
+            font-size: 2.4rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+
+    .Popular-article {
+        width: 100%;
+        float: none;
+
+    }
+}

@@ -1,0 +1,97 @@
+{% extends 'layouts/layout.twig' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+<div class="border--generator border--grey-gold">
+
+		<div class="content-wrapper">
+
+			<div class="Hero-content">
+
+				{% include 'shared/nav.twig' with
+					{
+						isHome: true,
+						isHeader: true
+					}
+				%}
+
+			</div>
+
+			<div class="Main-content">
+
+				<div class="Hero-header">
+		            {% include 'modules/collaboration-header.twig' with
+		                {
+		                    copy: 'a partnership with <a href="#">Zappos</a>*'
+		                }
+		            %}
+
+					{% include 'modules/inline-video.twig' ignore missing with vars only %}
+
+					<div class="Hero-copy">
+
+						<div class="flair">
+							<img class="mr-logo" src="images/logo-spon.png" alt="FPO">
+							<img class="handshake" src="images/icons/handshake.png" alt="FPO">
+							<img class="sponsor-logo" src="images/chanel.png" alt="FPO">
+						</div>
+
+						<div class="headline">
+							Saving Face
+						</div>
+
+						<div class="dek">
+							You'll definitely reach for a bar of dark chocolate.
+						</div>
+
+						<div class="meta">
+							<div class="byline">
+								Leandra Medine
+							</div>
+							<div class="date">
+								1.10.17
+							</div>
+						</div>
+
+						{% include 'modules/share-icons.twig' %}
+
+					</div>
+
+				</div>
+
+				{% include 'modules/article-copy.twig' with
+				    {
+				        isCollaboration: true
+				    }
+				%}
+
+				{% include 'modules/fpo.twig' with
+				    {
+				        copy: "Comments"
+				    }
+				%}
+
+				{% include 'modules/fpo.twig' with
+				    {
+				        copy: "Next Steps"
+				    }
+				%}
+
+			</div>
+
+			{% include 'shared/_footer.twig' %}
+
+		</div>
+
+		<div class="border-accent">
+		</div>
+
+	</div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

@@ -1,0 +1,153 @@
+// _inline-shopping.scss
+
+.Inline-shopping {
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin: 0 0 5rem;
+    border-bottom: 0.4rem solid $black;
+
+    .title {
+        @include knockout-50();
+        font-size: 5rem;
+        text-transform: uppercase;
+        letter-spacing: -0.42px;
+        line-height: 0.8;
+    }
+
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .inline-shopping-item {
+            width: 15.3rem;
+            height: 20rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+            @include knockout-30();
+            margin: 4rem 0 0;
+            padding: 0 1rem;
+
+            &:hover {
+                cursor: pointer;
+
+                .price {
+                    opacity: 1;
+                }
+            }
+
+            .price {
+                min-width: 5.6rem;
+                text-align: center;
+                background: url('../images/price-tag.png') center center no-repeat;
+                background-size: cover;
+                padding: 1rem 0.5rem 0.5rem;
+                font-size: 1.4rem;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: rotate(10deg);
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+            img {
+                flex-shrink: 1;
+                height: calc(100% - 4rem);
+            }
+
+            .brand {
+                font-size: 1.6rem;
+                margin: 2rem 0 0;
+            }
+        }
+    }
+
+    .see-all {
+        @include knockout-30();
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        color: $gold;
+        margin: 4rem 0 0;
+        transition: color 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            color: $black;
+        }
+    }
+
+    &.inline {
+        border: none;
+
+        .title {
+            display: none;
+        }
+
+        .items {
+
+            .inline-shopping-item {
+                margin: 0;
+            }
+        }
+
+        .see-all {
+            display: none;
+        }
+    }
+
+    &.inline-home {
+        margin: 2rem 0 5rem;
+
+        .title {
+            text-transform: none;
+            font-size: 3.6rem;
+        }
+
+        .items {
+            height: 24rem;
+            overflow: hidden;
+
+            .inline-shopping-item {
+                width: 17.7rem;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+
+        &.inline-home {
+
+            .items {
+                overflow: initial;
+                height: initial;
+
+                .inline-shopping-item {
+                    width: 50%;
+
+                    &:nth-of-type(5) {
+                        display: none;
+                    }
+
+                    &:nth-of-type(6) {
+                        display: none;
+                    }
+
+                    &:nth-of-type(7) {
+                        display: none;
+                    }
+
+                    &:nth-of-type(8) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

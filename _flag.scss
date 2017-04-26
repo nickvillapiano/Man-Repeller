@@ -1,0 +1,48 @@
+// _flag.scss
+
+.flag {
+    text-align: center;
+    width: 100%;
+    margin: -0.6rem auto 0.8rem;
+    // max-width: 25.9rem;
+    @include knockout-50;
+    font-size: 1.6rem;
+    // color: $gold;
+    color: $black;
+    // letter-spacing: 4.05px;
+    text-transform: uppercase;
+    //
+    //
+    // font-size: 3.6rem;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    margin: 1rem 0 0 0;
+    // text-transform: none;
+
+    img {
+        max-width: 2.5rem;
+        @include inline-vertical;
+        //
+        // max-width: 3.5rem;
+        max-height: 2.5rem;
+    }
+
+    span {
+        @include inline-vertical;
+        margin: 0.5rem 2rem 0;
+        //
+        margin: 0.5rem 0.5rem 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .flag {
+        white-space: nowrap;
+
+        span {
+            margin: 0.5rem 1rem 0;
+        }
+    }
+}

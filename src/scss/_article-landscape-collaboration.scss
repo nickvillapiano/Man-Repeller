@@ -1,0 +1,113 @@
+// _article-landscape-collaboration.scss
+
+.Article-landscape-collaboration {
+    background: rgba($dark-green, 0.02);
+
+    .border {
+
+        &:before {
+            border-color: $dark-green;
+        }
+
+        &:after {
+            border-color: $dark-green;
+        }
+    }
+
+    .border-accent {
+        border-color: $gold;
+
+        &:before {
+            background: $gold;
+        }
+
+        &:after {
+            background: $gold;
+        }
+    }
+
+    .Paper-doll {
+
+        &:before {
+            background: $dark-green;
+        }
+    }
+
+    .Hero-header {
+
+        .Inline-video {
+            margin: 0 0 0 0;
+        }
+    }
+
+    .Hero-copy {
+        background: $dark-green;
+        padding: 4rem 5rem 3rem;
+
+        @media only screen and (max-width: 767px) {
+            padding: 4rem 2rem;
+            margin: 1rem 0 0;
+        }
+
+        .flair {
+            display: none;
+
+            @media only screen and (max-width: 767px) {
+                flex-direction: column;
+                margin: 0 0 2rem;
+            }
+
+            img {
+                max-height: initial;
+
+                &.mr-logo {
+                    max-width: 14.1rem;
+
+                    @media only screen and (max-width: 767px) {
+                        max-width: 10rem;
+                    }
+                }
+
+                &.handshake {
+                    max-width: 6.1rem;
+                    margin: 0 1.5rem;
+
+                    @media only screen and (max-width: 767px) {
+                        max-width: 5rem;
+                        margin: 1.5rem;
+                    }
+                }
+
+                &.sponsor-logo {
+                    max-width: 12rem;
+
+                    @media only screen and (max-width: 767px) {
+                        max-width: 8rem;
+                    }
+                }
+            }
+        }
+
+        .headline {
+            @include chronicle-black();
+            font-size: calc(1rem + 8vw);
+
+            @media only screen and (min-width: 1280px) {
+                font-size: 12rem;
+            }
+
+            @media only screen and (max-width: 767px) {
+                font-size: 6.8rem;
+            }
+        }
+
+        .meta {
+            margin: 4rem 0;
+        }
+    }
+
+    .Tag-share {
+        // AR: Need this visible for slidebar to work. Do we need a workaround for it?
+        display: none;
+    }
+}

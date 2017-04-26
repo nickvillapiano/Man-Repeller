@@ -1,0 +1,32 @@
+<!-- Feed article -->
+
+<section class="Feed-article {{class}}">
+	<div class="thumbnail">
+        <img src="{{imgSrc}}" alt="Feed Article Thumb">
+    </div>
+    <div class="copy">
+        {% if hasFlag %}
+            <div class="flag">
+                <img src="{{flagSrc1}}">
+                <span>{{flagCopy}}</span>
+                <img src="{{flagSrc2}}">
+            </div>
+        {% endif %}
+        {% if hasFlair %}
+            <div class="flair">
+                <img src="{{flairSrc}}" alt="FPO">
+            </div>
+        {% endif %}
+        <div class="headline">
+            {{headline}}
+        </div>
+        {% if hasDek %}
+            <div class="dek">
+                {{dek}}
+            </div>
+        {% endif %}
+        <div class="byline">
+            {{byline}}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,36 @@
+// _article-slideshow.scss
+
+.Article-slideshow {
+
+    .Hero-copy {
+
+        .headline {
+            @include chronicle-black();
+            line-height: 1;
+        }
+    }
+
+    .Slideshow-trigger {
+        position: relative;
+        background: $white;
+        color: $dark-green;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 33rem;
+        @include chronicle-semi();
+        font-size: 2.4rem;
+        height: 7.2rem;
+        margin: 4rem auto 0;
+
+        .icon {
+            max-width: 5.4rem;
+            position: absolute;
+            top: -2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

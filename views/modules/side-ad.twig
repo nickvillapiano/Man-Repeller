@@ -1,0 +1,23 @@
+<!-- Side ad -->
+
+<section class="Side-ad right {% if hasFeaturedComment %}has-featured-comment{% endif %}">
+    {% if hasFeaturedComment %}
+        {% include 'modules/featured-comment.twig' with
+            {
+                comment: "A friend of mine refered to Lena Dunham as the Andrew Dice Clay of feminism. I can't fine the lie in it...",
+                avatarImgSrc: "images/sam.png",
+                commentAuthor: "Samantha",
+                articleTitle: "Can Cellulite Sell Magazines?"
+            }
+        %}
+    {% else %}
+        <div class="ad-wrapper">
+            <img class="side-ad-desktop" src="{{adSrc}}" alt="Side ad">
+            <img class="side-ad-mobile" src="{{adSrcMobile}}" alt="Side ad">
+
+            <div class="trending-module">
+                <img src="images/trending-module.png" alt="FPO">
+            </div>
+        </div>
+    {% endif %}
+</section>

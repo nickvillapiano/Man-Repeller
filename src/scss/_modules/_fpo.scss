@@ -1,0 +1,35 @@
+// _fpo.scss
+
+.Fpo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 75rem;
+    margin: 10rem auto;
+    background: $grey;
+    color: $white;
+    text-transform: uppercase;
+    min-height: 50rem;
+    @include knockout-50();
+    font-size: 2.4rem;
+    //
+    display: none;
+}
+
+.Home {
+
+    .Fpo {
+        margin: 0 auto 2rem;
+        max-width: initial;
+
+        @media only screen and (max-width: 1023px) {
+            width: calc(100% - 14rem);
+        }
+
+        @media only screen and (max-width: 767px) {
+            width: 100%;
+        }
+    }
+}

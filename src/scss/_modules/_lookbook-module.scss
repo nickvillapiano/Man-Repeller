@@ -1,0 +1,76 @@
+// _lookbook-module.scss
+
+.Lookbook-module {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32rem;
+    background: $navy;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-bottom: -6.8rem;
+    margin-top: -4rem;
+
+    .image {
+        max-width: 24rem;
+    }
+
+    .lookbook-logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        text-align: center;
+        padding: 2rem 5%;
+
+        img {
+            width: 9.5rem;
+        }
+
+        .the-lookbook {
+            @include knockout-50();
+            font-size: 5.4rem;
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            position: relative;
+            z-index: 2;
+            margin: -1.5rem 0 0;
+            //
+            font-size: calc(2rem + 2.3vw);
+
+            &:before {
+                content: "the";
+                font-size: 2.4rem;
+                display: block;
+            }
+
+            @media only screen and (min-width: 1440px) {
+                font-size: 5.4rem;
+            }
+
+            @media only screen and (max-width: 767px) {
+
+                &:before {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        .sub {
+            @include knockout-30();
+            font-size: 2rem;
+            line-height: 1.2;
+            margin: 2rem 0 0;
+
+            @media only screen and (max-width: 767px) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    & + .More-button {
+        margin-top: 17rem;
+    }
+}
+

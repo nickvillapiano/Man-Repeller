@@ -1,0 +1,65 @@
+// _collaboration-footer.scss
+
+.Collaboration-footer {
+    @include knockout-30();
+    font-size: 1.8rem;
+    line-height: 1.33;
+    margin: 0 0 4.3rem 0;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: $white;
+    padding: 0 2rem 0 0;
+
+    .spon-badge {
+        position: relative;
+        top: initial;
+        left: initial;
+
+        .logo {
+
+            svg {
+
+                .cls-1 {
+                    fill: $black;
+                }
+            }
+        }
+    }
+
+    .copy {
+        color: $black;
+        max-width: 50rem;
+
+        a, a:hover, a:active, a:visited, a:link {
+            color: $black;
+
+            &:before {
+                bottom: 0.2rem;
+            }
+
+            &:hover {
+
+                &:before {
+                    background: $black;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 2rem;
+
+        .spon-badge {
+            width: 100%;
+        }
+
+        .copy {
+            padding: 0 2rem;
+        }
+    }
+}

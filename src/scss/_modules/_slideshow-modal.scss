@@ -1,0 +1,288 @@
+// _slideshow-modal.scss
+
+.Slideshow-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    // AR: temporarily adding max-width to combat horiz scroll introduced by
+    // using vw on long-scroll implementation
+    max-width: 100%;
+    background: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $white;
+    //
+    transition: 0.3s;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    &.show {
+        opacity: 1;
+        z-index: 9999;
+        pointer-events: initial;
+    }
+
+    .x-close {
+        position: absolute;
+        top: 3rem;
+        right: 4rem;
+        z-index: 20;
+
+        svg {
+            width: 2rem;
+            fill: $white;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            svg {
+
+                .cls-1 {
+                    fill: $gold;
+                }
+            }
+        }
+    }
+
+    .image-slide {
+        display: none;
+        &.show {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-grow: 1;
+        position: relative;
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            left: 2rem;
+            transform: translateY(-50%);
+            z-index: 1;
+
+            background-color: transparent;
+            border-radius: 50%;
+            width: 6.5rem;
+            height: 6.5rem;
+            transition: background-color 0.3s;
+
+            // Kill arrows on mobile
+            @media only screen and (max-width: 767px) {
+                display: none;
+            }
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-65%, -50%, 0);
+                .cls-1 {
+                    fill: $white;
+                    transition: fill 0.3s;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                background: $black;
+
+                svg {
+
+                    .cls-1 {
+                        fill: $gold;
+                    }
+                }
+            }
+
+            &.left-arrow {
+
+            }
+
+            &.right-arrow {
+                left: initial;
+                right: 2rem;
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+
+        figure.image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .footer-bar {
+        background: $black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include knockout-50();
+        font-size: 2rem;
+        padding: 2.4rem 4rem;
+        position: relative;
+        z-index: 1;
+        min-height: 7rem;
+
+        @media only screen and (max-width: 1279px) {
+            font-size: 1.8rem;
+        }
+
+        a, a:hover, a:active, a:visited, a:link {
+            color: $white;
+            @include knockout-30();
+            font-size: 2rem;
+            @media only screen and (max-width: 1279px) {
+                font-size: 1.8rem;
+            }
+
+
+            &:before {
+                background: $white;
+                bottom: 0.3rem;
+            }
+
+            &:hover {
+
+            }
+        }
+
+        .footer-defaults {
+            display: flex;
+            width: 100%;
+        }
+
+        .pagination {
+            white-space: nowrap;
+        }
+
+        .divider {
+            border-left: 0.1rem solid $border-divider-grey;
+            margin-left: 2rem;
+            padding-left: 2rem;
+        }
+
+        .title {
+        }
+
+        .shopping-links {
+            flex-grow: 1;
+            a {
+                font-size: 2rem;
+                @include knockout-50();
+                @media only screen and (max-width: 1279px) {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        .credits {
+            @include chronicle-semi();
+            font-size: 1.6rem;
+            width: 100%;
+            overflow: hidden;
+            padding: 0 0 0 6.8rem;
+            max-height: 0;
+            opacity: 0;
+            transition: all .3s;
+
+            i {
+                @include chronicle-display-italic();
+            }
+        }
+
+        .lightbox-caret {
+            transition: 0.3s;
+            width: 2rem;
+            height: 1.4rem;
+            margin-left: auto;
+            flex-shrink: 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            svg {
+
+                .cls-1 {
+                    fill: $gold;
+                }
+            }
+        }
+
+        &.expand {
+            .credits {
+                // heavy left-pad to indent col.
+                padding: 15px 0 0 6.8rem;
+                max-height: 10rem;
+                opacity: 1;
+            }
+
+            .lightbox-caret {
+                bottom: 2rem;
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .caption {
+        position: absolute;
+        bottom: 7rem; // height of footer
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background: rgba($dark-green, 0.95);
+        padding: 5vw;
+        transform: translateY(100%) translateY(7rem);
+        transition: transform 0.5s;
+        //
+        padding: 4rem;
+
+        &.show {
+            transform: none;
+        }
+
+        p {
+            @include knockout-30();
+            font-size: 2rem;
+
+            i {
+                @include chronicle-semi-italic();
+            }
+        }
+
+        a, a:hover, a:active, a:visited, a:link {
+            color: $white;
+
+            &:before {
+                bottom: 0.3rem;
+                background: $white;
+            }
+
+            &:hover {
+                color: $gold;
+
+                &:before {
+                    background: $gold;
+                }
+           }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+// Links
+a, a:hover, a:active, a:visited, a:link {
+  color: $hcs-blue;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+
+.Styleguide {
+
+    a, a:hover, a:active, a:visited, a:link {
+        color: $gold;
+        font-size: 1.8rem;
+        text-decoration: none;
+        transition: color 0.2s, box-shadow 0.2s;
+        box-shadow: inset 0rem -0.1rem $white,
+                inset 0 -0.2rem $black;
+
+        &:hover {
+            color: $black;
+            box-shadow: inset 0rem -0.1rem $white,
+                        inset 0 -0.2rem $gold;
+        }
+    }
+}

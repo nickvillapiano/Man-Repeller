@@ -1,0 +1,85 @@
+// _side-ad.scss
+
+.Side-ad {
+    max-width: 100%;
+    text-align: center;
+    clear: right;
+    position: relative;
+
+    .side-ad-desktop {
+        display: inline;
+    }
+
+    .side-ad-mobile {
+        display: none;
+    }
+
+    .ad-wrapper {
+        max-height: 60rem;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .trending-module {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30rem;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    &.right {
+        margin: 0;
+    }
+
+    &.fixed {
+        position: fixed;
+        top: 1rem;
+        right: 8.6rem;
+    }
+
+    &.show-trending {
+
+        .trending-module {
+            opacity: 1;
+        }
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+
+    .Side-ad {
+        min-width: 30rem;
+
+        &.right {
+            margin: 0 0 0 1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .Side-ad {
+        width: 100%;
+        float: none;
+        margin: 0 auto 2rem;
+        clear: both;
+
+        &.right {
+            margin: 0 0 1rem;
+        }
+
+        .featured-comment {
+            display: none;
+        }
+
+        .side-ad-desktop {
+            display: none;
+        }
+
+        .side-ad-mobile {
+            display: inline;
+        }
+    }
+}

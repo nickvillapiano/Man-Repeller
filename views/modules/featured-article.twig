@@ -1,0 +1,28 @@
+<!-- Featured article -->
+
+{# {% include 'modules/featured-article.twig' with
+    {
+        imgPath: "",
+        altText: "",
+        title: "",
+        author: "",
+        hasFlag: boolean
+    }
+%} #}
+
+<section class="featured-article">
+	<div class="thumbnail">
+		<img src="{{imgPath}}" alt="{{altText}}">
+	</div>
+	<div class="meta">
+		<div class="title">
+			{{title}}
+		</div>
+		<div class="author">
+			{{author}}
+		</div>
+	</div>
+	{% if hasFlag %}
+		{% include 'modules/flag.twig' %}
+	{% endif %}
+</section>

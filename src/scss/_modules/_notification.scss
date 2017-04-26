@@ -1,0 +1,74 @@
+// _notification.scss
+
+.Notification {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 27.4rem;
+    transform: translateX(100%) translateX(7rem);
+    transition: 0.4s;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+
+    &.in {
+        transform: translateX(0);
+    }
+
+    &.fade {
+        opacity: 0;
+    }
+
+    .icon {
+        min-width: 4.5rem;
+        width: 4.5rem;
+        transform: rotateY(180deg);
+        position: absolute;
+        left: -3.5rem;
+
+        img {
+
+        }
+    }
+
+    .meta {
+        background: $white;
+        padding: 1rem 2rem;
+
+        strong {
+            @include knockout-50();
+            font-size: 1.7rem;
+        }
+
+        em {
+            @include chronicle-semi-italic();
+            font-size: 1.7rem;
+        }
+
+        a, a:hover, a:active, a:visited, a:link {
+            @include chronicle-semi();
+            font-size: 1.7rem;
+            display: inline-block;
+            width: 26ch;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &:hover {
+
+            }
+        }
+    }
+
+    .x-close {
+        position: absolute;
+        top: -1rem;
+        right: -1rem;
+        width: 2rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+    }
+}

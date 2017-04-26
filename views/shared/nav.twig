@@ -1,0 +1,175 @@
+<!-- Nav -->
+
+<nav class="Nav {% if isFooter %}footer-nav{% else %}header-nav{% endif %}">
+    {% if isHeader %}
+        <div class="logo">
+            <div class="mobile-menu-trigger">
+                <img src="images/menu-trigger.png">
+            </div>
+            <div class="monthly-theme">
+                <img src="images/monthly-theme.png">
+            </div>
+            <svg viewBox="0 0 716.55 73.921">
+                <use xlink:href="#mr-logo"></use>
+            </svg>
+            {% include 'modules/paper-doll.twig' %}
+            <div class="mobile-paper-doll">
+                <img src="images/mobile-paper-doll.png">
+            </div>
+            <div class="what-is-man-repeller">
+                <div>
+                    <a href="#">What is</a><br>
+                    <a href="#">Man Repeller?</a>
+                </div>
+            </div>
+        </div>
+
+        {% include 'modules/mobile-menu.twig' %}
+
+    {% endif %}
+
+    <div class="nav-menu">
+        <div class="share-icons-wrapper">
+            <div class="share-bucket">
+                <span>
+                    Follow us
+                </span>
+                <img src="images/carat.svg">
+            </div>
+            <ul class="share-icons left">
+                <li class="menu-trigger">
+                    <a href="#">
+                        Menu
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/share/facebook-black.png" alt="FPO">
+                        <img src="images/share/facebook-color.png" alt="FPO">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/share/twitter-black.png" alt="FPO">
+                        <img src="images/share/twitter-color.png" alt="FPO">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/share/instagram-black.png" alt="FPO">
+                        <img src="images/share/instagram-color.png" alt="FPO">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/share/pinterest-black.png" alt="FPO">
+                        <img src="images/share/pinterest-color.png" alt="FPO">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/share/snapchat-black.png" alt="FPO">
+                        <img src="images/share/snapchat-color.png" alt="FPO">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/share/bloglovin-black.png" alt="FPO">
+                        <img src="images/share/bloglovin-color.png" alt="FPO">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/share/flipboard-black.png" alt="FPO">
+                        <img src="images/share/flipboard-color.png" alt="FPO">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="categories right">
+            {% if isHeader %}
+                <li class="mrtreats">
+                    <a href="#">
+                        <img src="images/hash.png">
+                        MRTreats
+                    </a>
+                </li>
+                <li>
+                    <div class="icons">
+                        <img src="images/bird-white.jpg">
+                        <img src="images/bird-color.jpg">
+                    </div>
+
+                    <a href="#">Fashion</a>
+                </li>
+                <li>
+                    <div class="icons">
+                        <img src="images/trophy-white.jpg">
+                        <img src="images/trophy-color.jpg">
+                    </div>
+                    <a href="#">Issues</a>
+                </li>
+                <li>
+                    <div class="icons">
+                        <img src="images/lightning-outline.png">
+                        <img src="images/lightning-color.png">
+                    </div>
+                    <a href="#">$hop</a>
+                </li>
+                <li class="lookbook-trigger">
+                    <div class="icons">
+                        <img src="images/viewfinder-white.jpg">
+                        <img src="images/viewfinder-color.jpg">
+                    </div>
+
+                    <a href="#">Lookbook</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg viewBox="0 0 100 100">
+                            <use xlink:href="#search-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+            {% endif %}
+            {% if isFooter %}
+                <li>
+                    <a href="#">Advertise</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+
+    {% if isFooter %}
+        <div class="logo footer">
+            <svg viewBox="0 0 716.55 73.921">
+                <use xlink:href="#mr-logo"></use>
+            </svg>
+        </div>
+        <div class="disclosure">
+            <span>
+                All Materials &copy;2010 - 2017 Man Repeller, LLC
+            </span>
+            <span>
+                <a href="#">Disclosure</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </span>
+        </div>
+    {% endif %}
+</nav>
+{% if isFooter %}
+{% else %}
+    <div class="mobile-logo">
+        <svg viewBox="0 0 100 100">
+            <use xlink:href="#small-logo"></use>
+        </svg>
+    </div>
+{% endif %}

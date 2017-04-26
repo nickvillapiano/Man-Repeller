@@ -1,0 +1,29 @@
+{% extends 'layouts/layout.twig' %}
+
+{% block header %}{% endblock %}
+
+{% block content %}
+
+<div class="table-of-contents">
+
+    <div class="logo">
+        <svg viewBox="0 0 716.55 73.921">
+            <use xlink:href="#mr-logo"></use>
+        </svg>
+    </div>
+
+    <nav>
+        {% for section in sections %}
+        <section>
+        {% for page in section %}
+            <a href="{{ page.url }}">{{ page.label }}</a>
+        {% endfor %}
+        </section>
+        {% endfor %}
+    </nav>
+
+</div>
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

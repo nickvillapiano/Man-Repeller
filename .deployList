@@ -1,0 +1,19 @@
+# Files/Folders to INCLUDE
++ .foreverignore
++ /bin/
++ /config/
++ /config/forever.json
++ /data/
++ /dist/
++ /routes/
++ /views/
++ /app.js
++ /package.json
+
+# Files/Folders to EXCLUDE
+- .DS_Store
+- /node_modules/
+- /config/**
+
+# Ignore all other files in the root
+- /*

@@ -1,0 +1,75 @@
+// Border generation mixin
+// NOTE: Linear gradients go wonk if you have more than two colors. So like, only two here.
+@mixin border-generator($mainColor, $altColor, $leftHeight: 20%, $rightHeight: 15%, $width: 1.8rem) {
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-width: $width;
+        border-style: solid;
+        border-color: $mainColor;
+        pointer-events: none;
+        z-index: 3;
+    }
+
+    &:before {
+        // main border
+        border-image: linear-gradient(180deg, $mainColor 0%, $mainColor $leftHeight, $altColor $leftHeight, $altColor 100%) 1;
+    }
+
+    &:after {
+        // right-only border
+        border-width: 0 $width 0 0;
+        border-image: linear-gradient(180deg, $mainColor 0%, $mainColor $rightHeight, $altColor $rightHeight, $altColor 100%) 1;
+    }
+
+    @media only screen and (max-width: 767px) {
+        &:before {
+            border-width: 1rem;
+        }
+        &:after {
+            border-width: 0 1rem 0 0;
+        }
+    }
+}
+
+// This is the default colorset
+.border--default {
+    @include border-generator($sky, $grass);
+}
+
+// ... you can also delcare custom combos
+.border--gold-pink {
+    @include border-generator($gold, $pink);
+}
+
+// ... or add them to this map to have them auto generate
+$colors: (
+    blue: $blue,
+    sky: $sky,
+    blush: $blush,
+    grass: $grass,
+    ruby: $ruby,
+    navy: $navy,
+    grey: $dark-green,
+    gold: $gold
+);
+
+// Auto-generator: 2-dimensional matrix means 2 loops
+@each $color-first-name, $color-first-val in $colors {
+    @each $color-second-name, $color-second-val in $colors {
+        @if $color-first-name == $color-second-name {
+            .border--#{$color-first-name} {
+                @include border-generator($color-first-val, $color-second-val);
+            }
+        } @else {
+            .border--#{$color-first-name}-#{$color-second-name} {
+                @include border-generator($color-first-val, $color-second-val);
+            }
+        }
+    }
+}

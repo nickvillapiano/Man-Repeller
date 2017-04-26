@@ -1,0 +1,92 @@
+// _more-button.scss
+
+.More-button {
+    width: 100%;
+    clear: both;
+    text-align: center;
+    margin: 10rem 0 5rem;
+    float: left;
+    transition: opacity 0.3s, margin-bottom 0.3s;
+    transition-delay: 1s;
+
+    &.last {
+        margin: 10rem 0 -5rem;
+    }
+
+    &.remove {
+        opacity: 0;
+        margin-bottom: -12rem;
+    }
+
+    .button {
+        height: 5rem;
+        font-size: 2.4rem;
+        padding: 1.4rem 0 0 0;
+        letter-spacing: 1.4px;
+        color: $border-black;
+
+        &:hover {
+            animation: colorWhite 0.3s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes colorWhite {
+            0% {
+                color: $border-black;
+            }
+
+            100% {
+                color: $white;
+            }
+        }
+    }
+
+    .hands {
+        width: 100%;
+        position: relative;
+        top: -4.3rem;
+        z-index: 1;
+        pointer-events: none;
+
+        .hand {
+            max-width: 4.8rem;
+            @include inline-vertical;
+            transform: rotate(-10deg);
+            margin: 0 3.5rem 0 0;
+
+            img {
+            }
+
+            & + .hand {
+                transform: rotate(10deg) rotateY(180deg);
+                margin: 0 0 0 3.5rem;
+            }
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.loading {
+
+        .hands {
+            animation: hands 0.6s linear infinite;
+        }
+
+        @keyframes hands {
+
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-1rem);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    }
+}

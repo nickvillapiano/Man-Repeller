@@ -1,0 +1,45 @@
+// _large-ad.scss
+
+.Large-ad {
+    width: 100%;
+    text-align: center;
+    margin: 3rem auto 5rem;
+    clear: both;
+    padding: 2rem 0;
+    position: relative;
+
+    &:before {
+        content: "";
+        width: 50vw;
+        height: 100%;
+        background: $light-white;
+        position: absolute;
+        top: 0;
+        left: -25vw;
+        z-index: -1;
+    }
+
+    &:after {
+        content: "";
+        width: 50vw;
+        height: 100%;
+        background: $light-white;
+        position: absolute;
+        top: 0;
+        right: -25vw;
+        z-index: -1;
+    }
+
+    background: $light-white;
+
+    @media only screen and (max-width: 1023px) {
+        display: none;
+    }
+}
+
+.Home {
+
+    .Large-ad {
+        margin: 0;
+    }
+}

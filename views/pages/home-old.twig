@@ -1,0 +1,378 @@
+{% extends 'layouts/layout.twig' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+	{% include 'modules/top-ad.twig' with
+		{
+			isHome: true
+		}
+	%}
+
+	<div class="border">
+
+		<div class="content-wrapper">
+
+			<div class="Hero-content">
+
+				{% include 'shared/nav.twig' with
+					{
+						isHome: true,
+						isHeader: true
+					}
+				%}
+				{% include 'modules/featured-articles.twig' with
+					{
+						isHome: true,
+						class: "left"
+					}
+				%}
+
+			</div>
+
+			<div class="Main-content">
+
+				{# {% include 'modules/delineator.twig' %} #}
+
+				<div class="Left-rail">
+
+					<hr class="top">
+
+					{% include 'modules/feed-article.twig' with
+					    {
+					        class: "left",
+					        imgSrc: "images/article1.jpg",
+					        headline: "11 Skincare Products We Buy Over and Over (and Over)",
+					        byline: "Haley Nahman",
+					        hasDek: true,
+					        dek: "This is the shit we're gonna on a post-apocalyptic island.",
+					        hasFlair: true,
+					        flairSrc: "images/icons/facial.png"
+					    }
+					%}
+
+					{% include 'modules/feed-article.twig' with
+					    {
+					        class: "left",
+					        imgSrc: "images/article2.jpg",
+					        headline: "Can’t Stop, Won’t Stop: MR Treats is Back!",
+					        byline: "Amelia Diamond",
+
+					        hasFlair: false,
+					        flairSrc: "images/icons/phone.png"
+					    }
+					%}
+
+					{% include 'modules/feed-article.twig' with
+					    {
+					        class: "left",
+					        imgSrc: "images/article3.jpg",
+					        headline: "How to Wear Classic Pieces (in a Not-So-Classic Way)",
+					        byline: "Leandra Medine",
+					        dek: "",
+					        hasFlag: false,
+					        flagSrc1: "images/green-mouth.png",
+							flagSrc2: "images/pink-mouth.png",
+							flagTitle: "Making Noise",
+							hasFlair: true,
+					        flairSrc: "images/icons/shoe.png"
+					    }
+					%}
+
+					<div class="in-flow-rail">
+						{% include 'modules/side-ad.twig' with
+							{
+								isHome: true,
+								adSrc: "images/side-ad.png",
+								adSrcMobile: "images/side-ad-mobile.jpg",
+								hasFeaturedComment: false
+							}
+						%}
+						{% include 'modules/side-ad.twig' with
+							{
+								isHome: true,
+								adSrc: "images/side-ad.png",
+								hasFeaturedComment: true
+							}
+						%}
+					</div>
+
+					{% include 'modules/feed-article.twig' with
+					    {
+					        class: "left",
+					        imgSrc: "images/article4.jpg",
+					        headline: "If You’re Freezing, You’re Layering Wrong",
+					        byline: "Leandra Medine",
+					        hasDek: true,
+					        dek: "I now realize that beauty is an infinite, abundant matter.",
+					        hasFlair: false,
+					        flairSrc: "images/icons/shoe.png"
+					    }
+					%}
+
+					<hr class="bottom">
+
+{# 					{% include 'modules/side-ad.twig' with
+						{
+							isHome: true,
+							adSrc: "images/side-ad.png",
+							hasFeaturedComment: true,
+							isWide: true
+						}
+					%} #}
+
+					<div class="two-features-square">
+
+						{% include 'modules/portrait-feature.twig' with
+						    {
+						    	imgSrc: "images/portrait-square2.jpg",
+						    	headline: "What’s Behind Our Fear of Change?",
+						    	byline: "Helena Balu",
+						    	hasDek: true,
+						    	dek: "My BF has a sakè bomb addiction.",
+						    	isSquare: true,
+						    	class: "left"
+						    }
+						%}
+						{% include 'modules/portrait-feature.twig' with
+						    {
+						    	imgSrc: "images/branded-content.jpg",
+						    	headline: "MR x Chanel Presents: Saving Face",
+						    	byline: "Leandra Medine",
+						    	isBranded: true,
+						    	flagSrc: "images/branded-flag.png",
+						    	class: "left",
+						    	hasDek: true,
+						    	dek: "Watch this video right away!"
+						    }
+						%}
+
+					</div>
+
+					<hr class="bottom">
+
+					<hr class="top">
+
+					{% include 'modules/feed-article.twig' with
+					    {
+					        class: "left",
+					        imgSrc: "images/obama-tuched.png",
+					        headline: "Obama’s Farewell Address was More Than Just a Goodbye",
+					        byline: "Helena Bala",
+					        dek: "When President Obama emerged last night in the city of blinding lights, his hometown of Chicago, he greeted an audience who wore their feelings on their sleeves",
+					        hasFlair: true,
+					        flairSrc: "images/icons/thoughts.png"
+					    }
+					%}
+
+					{% include 'modules/feed-article.twig' with
+					    {
+					        class: "left",
+					        imgSrc: "images/lady-tuched.png",
+					        headline: "The Best Anti-Aging Product is Actually For Your Hair",
+					        byline: "Leandra Medine",
+					        hasDek: true,
+					        dek: "I now realize that beauty is an infinite, abundant matter.",
+					        hasFlair: true,
+					        flairSrc: "images/icons/hairtea.png"
+					    }
+					%}
+
+					{% include 'modules/shopping-module.twig' with
+						{
+							isHome: true
+						}
+					%}
+
+					{% include 'modules/feed-article.twig' with
+					    {
+					        class: "left",
+					        imgSrc: "images/article7.jpg",
+					        headline: "The Kate Middleton Style Makeover She Never Asked For",
+					        byline: "Amelia Diamond",
+					        hasDek: true,
+					        dek: "I now realize that beauty is an infinite, abundant matter.",
+					        hasFlag: false,
+					        flagSrc1: "images/green-mouth.png",
+							flagSrc2: "images/pink-mouth.png",
+							flagTitle: "Making Noise"
+					    }
+					%}
+
+					{% include 'modules/feed-article.twig' with
+					    {
+					        class: "left",
+					        imgSrc: "images/kim-tuched.png",
+					        headline: "The Kim K Robbery Plot Thickens",
+					        byline: "Haley Nahman",
+					        dek: "I now realize that beauty is an infinite, abundant matter.",
+					        hasFlair: false,
+					        flairSrc: "images/icons/heart.png"
+					    }
+					%}
+
+					<hr class="bottom">
+
+					{% include 'modules/portrait-feature.twig' with
+					    {
+					    	imgSrc: "images/felicity-360.png",
+					    	headline: "Felicity Jones:",
+					    	hasDek: true,
+					    	dek: "A Rules of Style Story",
+					    	byline: "Esther Levy",
+					    	class: "left normal-feature",
+					    	hasFlag: true,
+					        flagSrc1: "images/trophy1.png",
+					        flagSrc2: "images/trophy2.png",
+					        flagTitle: "MR Hall of Fame"
+					    }
+					%}
+
+				</div>
+
+				<div class="Right-rail">
+
+					{% include 'modules/side-ad.twig' with
+						{
+							isHome: true,
+							adSrc: "images/side-ad.png",
+							adSrcMobile: "images/side-ad-mobile.jpg",
+							hasFeaturedComment: false
+						}
+					%}
+					{% include 'modules/side-ad.twig' with
+						{
+							isHome: true,
+							adSrc: "images/side-ad.png",
+							hasFeaturedComment: true
+						}
+					%}
+
+				</div>
+
+			</div>
+
+			<div class="Main-content">
+				<div class="Left-rail">
+
+					<hr class="top">
+
+					{% include 'modules/feed-article.twig' with
+					    {
+					        class: "left",
+					        imgSrc: "images/article7.jpg",
+					        headline: "The Kate Middleton Style Makeover She Never Asked For",
+					        byline: "Amelia Diamond",
+					        dek: "I now realize that beauty is an infinite, abundant matter.",
+					        hasFlag: false,
+					        flagSrc1: "images/green-mouth.png",
+							flagSrc2: "images/pink-mouth.png",
+							flagTitle: "Making Noise"
+					    }
+					%}
+
+					{% include 'modules/feed-article.twig' with
+					    {
+					        class: "left",
+					        imgSrc: "images/article8.jpg",
+					        headline: "The Kim K Robbery Plot Thickens",
+					        byline: "Haley Nahman",
+					        dek: "I now realize that beauty is an infinite, abundant matter.",
+					        hasFlag: false,
+					        flagSrc1: "images/green-mouth.png",
+							flagSrc2: "images/pink-mouth.png",
+							flagTitle: "Making Noise"
+					    }
+					%}
+
+					{% include 'modules/feed-article.twig' with
+					    {
+					        class: "left",
+					        imgSrc: "images/article1.jpg",
+					        headline: "11 Skincare Products We Buy Over and Over (and Over)",
+					        byline: "Haley Nahman",
+					        hasDek: true,
+					        dek: "I now realize that beauty is an infinite, abundant matter.",
+					        hasFlair: true,
+					        flairSrc: "images/icons/facial.png"
+					    }
+					%}
+
+					{% include 'modules/feed-article.twig' with
+					    {
+					        class: "left",
+					        imgSrc: "images/article2.jpg",
+					        headline: "Can’t Stop, Won’t Stop: MR Treats is Back!",
+					        byline: "Amelia Diamond",
+					        hasDek: true,
+					        dek: "I now realize that beauty is an infinite, abundant matter.",
+					        hasFlair: false,
+					        flairSrc: "images/icons/phone.png"
+					    }
+					%}
+
+					<hr class="bottom">
+
+
+
+{# 					<div class="two-features">
+
+						{% include 'modules/portrait-feature.twig' with
+						    {
+						    	imgSrc: "images/lingerie-360.jpg",
+						    	headline: "The <i>Power</i> of Personal Lingerie",
+						    	byline: "Helena Balu",
+						    	isSlideshow: true,
+						    	numberOfPhotos: "16",
+						    	class: "left",
+						    	hasDek: true,
+						    	dek: "I quit my job two years ago."
+						    }
+						%}
+
+						{% include 'modules/portrait-feature.twig' with
+						    {
+						    	imgSrc: "images/felicity-360.png",
+						    	headline: "Felicity Jones:",
+						    	hasDek: true,
+						    	dek: "a Rules of Style Story",
+						    	byline: "Esther Levy",
+						    	class: "left normal-feature"
+						    }
+						%}
+
+					</div> #}
+				</div>
+
+
+				<div class="Right-rail">
+				</div>
+
+			</div>
+
+			{% include 'modules/lookbook.twig' with
+			    {
+			        imgSrc1: "images/lookbook1.png",
+			        imgSrc2: "images/lookbook2.png",
+			        imgSrc3: "images/lookbook3.png"
+			    }
+			%}
+
+			{% include 'modules/more-button.twig' with
+			    {
+
+			    }
+			%}
+
+			{% include 'shared/_footer.twig' %}
+
+		</div>
+
+	</div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

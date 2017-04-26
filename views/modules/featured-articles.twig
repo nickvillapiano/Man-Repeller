@@ -1,0 +1,40 @@
+<!-- Featured articles -->
+
+<section class="Featured-articles {{class}}">
+	{% include 'modules/featured-article.twig' with
+		{
+			imgPath: "images/featured-article1.jpg",
+			altText: "Featured Article 1",
+			hasFlag: true,
+			flagSrc1: "images/lighter.png",
+			flagSrc2: "images/icons/trending-right.png",
+			flagTitle: "Big on the Internet",
+			title: "A Guide to Static-Proofing Your Hair",
+			author: "Julissa Treviño"
+		}
+	%}
+	{% include 'modules/featured-article.twig' with
+		{
+			imgPath: "images/featured-article2.jpg",
+			altText: "Featured Article 1",
+			hasFlag: false,
+			flagSrc1: "images/green-mouth.png",
+			flagSrc2: "images/pink-mouth.png",
+			flagTitle: "Making Noise",
+			title: "How to Wear 1 Lace Turtleneck 5 Different Ways",
+			author: "Haley Nahman"
+		}
+	%}
+	{% include 'modules/featured-article.twig' with
+		{
+			imgPath: "images/yoga2.gif",
+			altText: "Featured Article 1",
+			hasFlag: true,
+			flagSrc1: "images/green-mouth.png",
+			flagSrc2: "images/pink-mouth.png",
+			flagTitle: "Making Noise",
+			title: "Yoga Stretches You Can Do in Bed",
+			author: "Amelia Diamond"
+		}
+	%}
+</section>

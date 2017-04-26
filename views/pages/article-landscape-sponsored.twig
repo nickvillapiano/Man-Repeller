@@ -1,0 +1,106 @@
+{% extends 'layouts/layout.twig' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+	{% include 'modules/top-ad.twig' with
+		{
+			isHome: true
+		}
+	%}
+
+	<div class="border--generator border--grey-gold">
+
+		<div class="content-wrapper">
+
+			<div class="Hero-content">
+
+				{% include 'shared/nav.twig' with
+					{
+						isHome: true,
+						isHeader: true
+					}
+				%}
+
+			</div>
+
+			<div class="Main-content">
+
+				<div class="Hero-header">
+
+		            {% include 'modules/collaboration-header.twig' with
+		                {
+		                	isSponsored: true,
+		                    copy: 'a collaboration with <a href="#">Zappos</a>*'
+		                }
+		            %}
+
+		            {% include 'modules/inline-image.twig' with
+		                {
+
+		                    hasLightbox: true,
+		                    imgSrc: "images/inline-image1.jpg",
+		                    caption: "Ralph Lauren <a href='#'>utility jacket</a> and <a href=''>loafers</a> (styled with A.W.A.K.E, pants, Azzaro metallic button down from The Real Real, Aurélie Bidermann jewelry and Gucci gloves)"
+		                }
+		            %}
+
+					<div class="Hero-copy">
+
+						<div class="headline">
+							It’s Kind of a Funny Story…How I Met My Pet
+						</div>
+
+						<div class="dek">
+							5 Members of the Man Repeller Team Tell Their Adoption Tales
+						</div>
+
+						<div class="meta">
+							<div class="byline">
+								Leandra Medine
+							</div>
+							<div class="date">
+								1.10.17
+							</div>
+						</div>
+
+						{% include 'modules/share-icons.twig' %}
+
+					</div>
+
+				</div>
+
+				{% include 'modules/article-copy.twig' with
+				    {
+				        isSponsored: true
+				    }
+				%}
+
+				{% include 'modules/fpo.twig' with
+				    {
+				        copy: "Comments"
+				    }
+				%}
+
+				{% include 'modules/fpo.twig' with
+				    {
+				        copy: "Next Steps"
+				    }
+				%}
+
+			</div>
+
+			{% include 'shared/_footer.twig' %}
+
+		</div>
+
+		<div class="border-accent">
+		</div>
+
+	</div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

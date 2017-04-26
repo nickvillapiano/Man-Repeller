@@ -1,0 +1,22 @@
+<!-- Featured Comment -->
+
+<section class="Featured-comment {% if isWide %}wide{% endif %}">
+    <div class="flair">
+        <img src="images/pink-mouth-large.png" alt="Pink mouth icon">
+    </div>
+    <div class="comment">
+        {{comment}}
+    </div>
+    <div class="meta">
+        <div class="byline">
+            <img src="{{avatarImgSrc}}" alt="FPO">
+            <span>{{commentAuthor}}</span>
+        </div>
+        <div class="headline">
+            <span>
+                said about,
+            </span>
+            <a href="#">{{articleTitle}}</a>
+        </div>
+    </div>
+</section>

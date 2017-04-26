@@ -1,0 +1,118 @@
+// _pdf.scss
+
+.Pdf-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.Pdf {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: relative;
+    border-top: 0.4rem solid $grass;
+    border-bottom: 0.4rem solid $grass;
+    width: 100%;
+    margin: 0 auto;
+    // AR:
+    background: transparent;
+
+    .left-flair {
+        position: relative;
+        max-width: 4.5rem;
+        animation: tilt-animation 1s infinite linear;
+
+        @media only screen and (max-width: 767px) {
+            max-width: 3rem;
+        }
+    }
+
+    .right-flair {
+        @extend .left-flair;
+    }
+
+    @keyframes tilt-animation {
+        0% {
+            transform: rotate(-10deg)
+        }
+
+        25% {
+            transform: rotate(0deg)
+        }
+
+        50% {
+            transform: rotate(10deg)
+        }
+
+        75% {
+            transform: rotate(0deg)
+        }
+
+        100% {
+            transform: rotate(-10deg)
+        }
+    }
+
+    .meta {
+        @include knockout-50();
+        font-size: 2rem;
+        margin: 0 1rem;
+        text-align: center;
+        color: $blush;
+        padding: 0 4rem;
+        text-transform: none;
+
+        .headline {
+            padding: 0 1rem;
+            margin: 0;
+            //
+            display: none;
+        }
+
+        a, a:hover, a:active, a:visited, a:link {
+            color: $black;
+            font-size: 3rem;
+            white-space: normal;
+            box-shadow: inset 0rem -0.1rem $white,
+                        inset 0 -0.4rem $gold;
+
+            &:before {
+                display: none;
+            }
+
+            @keyframes wavy {
+                0% {
+                    background-position-x: 0%;
+                }
+
+                50% {
+                    background-position-x: 500%
+                }
+
+                100% {
+                    background-position-x: 0%;
+                }
+            }
+
+            &:hover {
+                color: $gold;
+                box-shadow: inset 0rem -0.1rem $white,
+                            inset 0 -0.4rem $black;
+
+            }
+
+            @media only screen and (max-width: 767px) {
+                font-size: 2.4rem;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            padding: 0;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        padding: 1.5rem 2rem;
+    }
+}

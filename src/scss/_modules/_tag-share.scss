@@ -1,0 +1,73 @@
+// _tag-share.scss
+
+.Tag-share {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: row;
+    //
+    padding: 0;
+
+    .Side-share {
+        flex-grow: 1;
+
+        .ephemera {
+            max-width: 30rem;
+
+            @media only screen and (max-width: 767px) {
+                visibility: hidden;
+            }
+        }
+
+        .meta {
+            right: initial;
+            left: 19.6rem;
+
+            @media only screen and (max-width: 767px) {
+                left: 0;
+                margin-left: -1rem;
+                top: 0;
+            }
+        }
+    }
+
+    .Tags {
+        margin-left: 5%;
+
+        @media only screen and (max-width: 767px) {
+            margin-left: 4rem;
+            white-space: nowrap;
+        }
+    }
+
+    .Share-icons {
+        margin: 0 0 0 0;
+        flex-grow: 999;
+        justify-content: flex-start;
+        margin-right: 5%;
+
+        &:before {
+            content: "Care to share?";
+            @include knockout-30();
+            color: $black;
+            font-size: 1.7rem;
+            margin-right: 1rem;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        img {
+            max-width: 4rem;
+        }
+    }
+
+
+    @media only screen and (max-width: 767px) {
+
+        .Share-icons {
+            margin-bottom: 2rem;
+        }
+    }
+}

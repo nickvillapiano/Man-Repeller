@@ -1,0 +1,98 @@
+{% extends 'layouts/layout.twig' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+	{% include 'modules/top-ad.twig' with
+		{
+			isHome: true
+		}
+	%}
+
+	<div class="border--generator border--navy-ruby">
+
+		<div class="content-wrapper">
+
+			<div class="Hero-content">
+
+				{% include 'shared/nav.twig' with
+					{
+						isHome: true,
+						isHeader: true
+					}
+				%}
+
+			</div>
+
+			<div class="Main-content">
+
+				<div class="Hero-header">
+
+					<figure class="Hero-image portrait">
+    					<img src="images/slideshow-hero.png" alt="FPO">
+					</figure>
+
+					<div class="Hero-copy">
+
+						<div class="headline">
+							How to Wear Office Trousers Without Looking Like a Stockbroker
+						</div>
+
+						{# <div class="dek">
+							Sweaters can be worn with just about anything.
+						</div> #}
+
+						<div class="meta">
+							<div class="byline">
+								Leandra Medine
+							</div>
+							<div class="date">
+								1.10.17
+							</div>
+							<div class="tag">
+								Fashion
+							</div>
+						</div>
+
+						{% include 'modules/share-icons.twig' %}
+
+						<div class="Slideshow-trigger">
+							<img class="icon" src="images/camera-icon.png">
+							View Slide Show
+						</div>
+
+					</div>
+
+				</div>
+
+				{% include 'modules/article-copy.twig' %}
+
+				{% include 'modules/fpo.twig' with
+				    {
+				        copy: "Comments"
+				    }
+				%}
+
+				{% include 'modules/fpo.twig' with
+				    {
+				        copy: "Next Steps"
+				    }
+				%}
+
+			</div>
+
+			{% include 'shared/_footer.twig' %}
+
+		</div>
+
+		<div class="border-accent">
+		</div>
+
+	</div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

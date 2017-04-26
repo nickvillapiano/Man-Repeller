@@ -1,0 +1,291 @@
+<!-- Article copy -->
+
+{% include 'modules/slideshow-modal.twig' with { slides: slideData } %}
+
+<section class="Article-copy">
+
+    <div class="left-rail">
+        {% if isCollaboration %}
+
+            <p>
+                You know when you’re having a really rough day/week/month/hour and the last thing you want to deal with is a doctor appointment, inconveniently situated right now, today, on the opposite side of town relative to where you need to be and what you need to do? You feel rushed, you’re frustrated, you’re probably tired and as much as you know that consulting a doctor is probably exactly what you need, you think you know better.
+            </p>
+            <p>
+                Only you don’t! So, no matter the genre of doctor, you suck it up, you go, and once you arrive you remember that it is never as bad — being at the doctor — as you think it’s going to be once you’re actually there. You’re a complex individual, of course, so, again, no matter the genre of doctor, you sort of turn the appointment into a therapy session. The physician asks how you’re doing and like a can of beans that has runneth over and cannot be stopped from spilling, you talk. And talk. And talk. You’re mad at your mom, you’re overwhelmed at work. Your skin is breaking out. Your best friend won’t talk to you. And then, like an angel from the heavens (or a happy lamp from Amazon), a beam of wisdom shines upon you. Sometimes it is simply words, other times, a doctor-approved remedy. And just like that, the worst day on earth has become the best.
+                {% include 'modules/endmark.twig' %}
+            </p>
+
+            {% include 'modules/collaboration-footer.twig' with
+                {
+                    copy: '*Special thanks to star guest Dr. Wechsler, director and producer Jay Buim and his team, makeup artist Fulvia Farolfi, and Breather for the beautiful space!'
+                }
+            %}
+
+        {% elseif isSponsored %}
+
+            <p>
+                You know when you’re having a really rough day/week/month/hour and the last thing you want to deal with is a doctor appointment, inconveniently situated right now, today, on the opposite side of town relative to where you need to be and what you need to do? You feel rushed, you’re frustrated, you’re probably tired and as much as you know that consulting a doctor is probably exactly what you need, you think you know better.
+            </p>
+            <p>
+                Only you don’t! So, no matter the genre of doctor, you suck it up, you go, and once you arrive you remember that it is never as bad — being at the doctor — as you think it’s going to be once you’re actually there. You’re a complex individual, of course, so, again, no matter the genre of doctor, you sort of turn the appointment into a therapy session. The physician asks how you’re doing and like a can of beans that has runneth over and cannot be stopped from spilling, you talk. And talk. And talk. You’re mad at your mom, you’re overwhelmed at work. Your skin is breaking out. Your best friend won’t talk to you. And then, like an angel from the heavens (or a happy lamp from Amazon), a beam of wisdom shines upon you. Sometimes it is simply words, other times, a doctor-approved remedy. And just like that, the worst day on earth has become the best.
+                {% include 'modules/endmark.twig' %}
+            </p>
+
+            {% include 'modules/collaboration-footer.twig' with
+                {
+                    copy: '*Join <a href="#">Zappos Rewards</a> and get access to free expedited shipping, points for rewards, early access to sales and more. Existing customers joining Zappos Rewards by 11/30 will also get a $15 Rewards Code.'
+                }
+            %}
+        {% else %}
+
+            {% if includeInlineSlideshow %}
+                {% include 'modules/inline-slideshow.twig'  with {
+                    hasLightbox: true,
+                    slides: slideData
+                    }
+                %}
+            {% endif %}
+
+            {% if hasCallout %}
+                {% include 'modules/series-callout.twig' %}
+            {% else %}
+                <p class="preamble">
+                    Wherever I go, tried it on and it did look great. I cooed, the sales assistant on commission cooed (perhaps a little more than me) and she bought it. The woman thanked me and gave me a hug. {# Little did she know that I would never forget her or that moment, as it marked a life milestone: I had finally experienced Retail Altruism. #}
+                </p>
+            {% endif %}
+
+            <p>
+                There was a time when, having tried on a beautiful one-off item of clothing that didn’t fit me, I would have hidden it somewhere in the shop so no one else could buy it. I would have found a forgotten rail and furtively shoved it out of sight. And when I say “no one else,” what I mean is any woman thinner than me. I did not look how teenagers were supposed to look. Teenagers were supposed to be freckled, fresh-faced, petite and lean like the ones who jumped about on beds in acne-preventative facial care adverts.
+            </p>
+            <p class="article-header">
+                A utility jacket — commonly worn casually with jeans and a T-shirt, right?
+            </p>
+            <p>
+                As a teenager, I was more shelving unit than female form. I was 5-foot-10 by the time I was 14 and 6-foot by the age of 16. I had big boobs, big feet, wide shoulders and wide hips. I did not look how teenagers were supposed to look. Teenagers were supposed to be freckled, fresh-faced, petite and lean like the ones who jumped about on beds in acne-preventative facial care adverts. I decided to forgo the jeans and crop top uniform of my peers, and instead did as all tall, broad teenage girls with large breasts do: I adopted a sort of <a href="#">Grand Dame of Flea Markets</a> aesthetic. I wore five dollar faux-mink stoles and floral, polyester A-line dresses and listened to other weary women like Billie Holiday with a sense of simpatico.
+            </p>
+
+            {% if not disableVideo %}
+
+                {# AR: Apologies for the double-negative above. Just wanted
+                       to non-destructively disable this video where needed, as Youtube embed was kicking back lots of console errors for me :/
+                #}
+
+                {% include 'modules/inline-video.twig' with
+                    {
+
+                    }
+                %}
+            {% endif %}
+
+            <p>
+                As a teenager, I was more shelving unit than female form. I was 5-foot-10 by the time I was 14 and 6-foot by the age of 16. I had big boobs, big feet, wide shoulders and wide hips. I did not look how teenagers were supposed to look. Teenagers were supposed to be freckled, fresh-faced, petite and lean like the ones who jumped about on beds in acne-preventative facial care adverts. I decided to forgo the jeans and crop top uniform of my peers, and instead did as all tall, broad teenage girls with large breasts do: I adopted a sort of Grand Dame of Flea Markets aesthetic. I wore five dollar faux-mink stoles and floral, polyester A-line dresses and listened to other weary women like Billie Holiday with a sense of simpatico.
+            </p>
+            <p class="List-header">
+                <span class="list-icon">12.</span><span class="list-title">In the West Village?</span>
+            </p>
+            <p>
+                My unusual body type engendered a sense of “otherness,” which was not helped by all my best female friends passing the Happy Go Lucky Teen Test with flying colors; a mangle of long, thin limbs and flat chests and big grins and delicate feet that did not resemble rafts. My envy meant I got hard-wired with bad habits early on, such as persuading my best friend to swap a black strapless dress for a wildly unflattering high-waisted trousers-and-waistcoat ensemble for her fifteenth birthday. I lied about where I had bought early-noughties built-up flatform trainers when friends admired them. I did everything I could to throw hurdles in front of other girls so I, the lagger, could catch up with them in the beauty race.
+            </p>
+            {% include 'modules/inline-image.twig' with
+                {
+
+                    hasLightbox: true,
+                    imgSrc: "images/inline-image1.jpg",
+                    caption: "<a href='#'>Chanel jacket</a>, <a href=''>skirt</a>, &amp; <a href='#'>boots</a>. <a href='#'>Walk of Shame</a> tank top, <a href='#'>Maria Francesca Pepe</a> choker "
+                }
+            %}
+            <p>
+                As a teenager, I was more shelving unit than female form. I was 5-foot-10 by the time I was 14 and 6-foot by the age of 16. I had big boobs, big feet, wide shoulders and wide hips. I did not look how teenagers were supposed to look. Teenagers were supposed to be freckled, fresh-faced, petite and lean like the ones who jumped about on beds in acne-preventative facial care adverts. I decided to forgo the jeans and crop top uniform of my peers, and instead did as all tall, broad teenage girls with large breasts do: I adopted a sort of Grand Dame of Flea Markets aesthetic. I wore five dollar faux-mink stoles and floral, polyester A-line dresses and listened to other weary women like Billie Holiday with a sense of simpatico.
+            </p>
+            {% include 'modules/inline-image.twig' with
+                {
+                    class: "inline-left",
+                    hasLightbox: true,
+                    imgSrc: "images/inline-image2.jpg",
+                    caption: "<a href='#'>Chanel jacket</a>, <a href=''>skirt</a>, &amp; <a href='#'>boots</a>. <a href='#'>Walk of Shame</a> tank top, <a href='#'>Maria Francesca Pepe</a> choker "
+                }
+            %}
+            <p>
+                My unusual body type engendered a sense of “otherness,” which was not helped by all my best female friends passing the Happy Go Lucky Teen Test with flying colors; a mangle of long, thin limbs and flat chests and big grins and delicate feet that did not resemble rafts. My envy meant I got hard-wired with bad habits early on, such as persuading my best friend to swap a black strapless dress for a wildly unflattering high-waisted trousers-and-waistcoat ensemble for her fifteenth birthday. I lied about where I had bought early-noughties built-up flatform trainers when friends admired them. I did everything I could to throw hurdles in front of other girls so I, the lagger, could catch up with them in the beauty race.
+            </p>
+            <p>
+                My unusual body type engendered a sense of “otherness,” which was not helped by all my best female friends passing the Happy Go Lucky Teen Test with flying colors; a mangle of long, thin limbs and flat chests and big grins and delicate feet that did not resemble rafts. My envy meant I got hard-wired with bad habits early on, such as persuading my best friend to swap a black strapless dress for a wildly unflattering high-waisted trousers-and-waistcoat ensemble for her fifteenth birthday. I lied about where I had bought early-noughties built-up flatform trainers when friends admired them. I did everything I could to throw hurdles in front of other girls so I, the lagger, could catch up with them in the beauty race.
+            </p>
+            {% include 'modules/inline-shopping.twig' with
+                {
+                    isInline: true,
+                    title: "Shop this Article"
+                }
+            %}
+            <p>
+                I decided to forgo the jeans and crop top uniform of my peers, and instead did as all tall, broad teenage girls with large breasts do:
+            </p>
+            {% include 'modules/quotation.twig' with
+                {
+                    copy: "My envy meant I got hard-wired with bad habits early on, such as persuading my best friend to swap a black strapless dress for a wildly unflattering high-waisted trousers-and-waistcoat ensemble for her fifteenth birthday. I lied about where I had bought early-noughties built-up flatform trainers when friends admired them. I did everything I could to throw hurdles in front of other girls so I, the lagger, could catch up with them in the beauty race."
+                }
+            %}
+            <p>
+                As a teenager, I was more shelving unit than female form. I was 5-foot-10 by the time I was 14 and 6-foot by the age of 16. I had big boobs, big feet, wide shoulders and wide hips. I did not look how teenagers were supposed to look. Teenagers were supposed to be freckled, fresh-faced, petite and lean like the ones who jumped about on beds in acne-preventative facial care adverts. I decided to forgo the jeans and crop top uniform of my peers, and instead did as all tall, broad teenage girls with large breasts do: I adopted a sort of Grand Dame of Flea Markets aesthetic. I wore five dollar faux-mink stoles and floral, polyester A-line dresses and listened to other weary women like Billie Holiday with a sense of simpatico.
+            </p>
+            {% include 'modules/blockquote.twig' with
+                {
+                    class: "inline-right",
+                    copy: "As a teenager, I was more shelving unit than female form…I had big boobs, big feet, wide shoulders and wide hips."
+                }
+            %}
+            <p>
+                My unusual body type engendered a sense of “otherness,” which was not helped by all my best female friends passing the Happy Go Lucky Teen Test with flying colors; a mangle of long, thin limbs and flat chests and big grins and delicate feet that did not resemble rafts. My envy meant I got hard-wired with bad habits early on, such as persuading my best friend to swap a black strapless dress for a wildly unflattering high-waisted trousers-and-waistcoat ensemble for her fifteenth birthday. I lied about where I had bought early-noughties built-up flatform trainers when friends admired them. I did everything I could to throw hurdles in front of other girls so I, the lagger, could catch up with them in the beauty race.
+            </p>
+            <p>
+                I carried a sense of this competitiveness well into adulthood. I would almost test myself to see how long I could go without telling a woman who looked absolutely beautiful that she looked absolutely beautiful (normally three drinks). I would say transparently envious comments like: “sure, her look is great, if you like things that obvious. She’s, like, the Hershey’s of hair.”
+            </p>
+            {% include 'modules/inline-image.twig' with
+                {
+                    class: "inline-left",
+                    hasLightbox: true,
+                    imgSrc: "images/inline-image2.jpg",
+                    caption: "Ralph Lauren <a href='#'>utility jacket</a> and <a href=''>loafers</a> (styled with A.W.A.K.E, pants, Azzaro metallic button down from The Real Real, Aurélie Bidermann jewelry and Gucci gloves)"
+                }
+            %}
+            <p>
+                Aged 28, I now realize that beauty is an infinite, abundant matter. Womankind as a whole doesn’t get an allotted amount to fight over. We all have our own stock and it doesn’t skyrocket when we deny or put down others.
+            </p>
+            <p>
+                My unusual body type engendered a sense of “otherness,” which was not helped by all my best female friends passing the Happy Go Lucky Teen Test with flying colors; a mangle of long, thin limbs and flat chests and big grins and delicate feet that did not resemble rafts. My envy meant I got hard-wired with bad habits early on, such as persuading my best friend to swap a black strapless dress for a wildly unflattering high-waisted trousers-and-waistcoat ensemble for her fifteenth birthday. I lied about where I had bought early-noughties built-up flatform trainers when friends admired them. I did everything I could to throw hurdles in front of other girls so I, the lagger, could catch up with them in the beauty race.
+            </p>
+            <p>
+                I carried a sense of this competitiveness well into adulthood. I would almost test myself to see how long I could go without telling a woman who looked absolutely beautiful that she looked absolutely beautiful (normally three drinks). I would say transparently envious comments like: “sure, her look is great, if you like things that obvious. She’s, like, the Hershey’s of hair.”
+            </p>
+            {% include 'modules/paragraph-break.twig' %}
+            <p>
+                My unusual body type engendered a sense of “otherness,” which was not helped by all my best female friends passing the Happy Go Lucky Teen Test with flying colors; a mangle of long, thin limbs and flat chests and big grins and delicate feet that did not resemble rafts. My envy meant I got hard-wired with bad habits early on, such as persuading my best friend to swap a black strapless dress for a wildly unflattering high-waisted trousers-and-waistcoat ensemble for her fifteenth birthday. I lied about where I had bought early-noughties built-up flatform trainers when friends admired them. I did everything I could to throw hurdles in front of other girls so I, the lagger, could catch up with them in the beauty race.
+            </p>
+            <p>
+                I carried a sense of this competitiveness well into adulthood. I would almost test myself to see how long I could go without telling a woman who looked absolutely beautiful that she looked absolutely beautiful (normally three drinks). I would say transparently envious comments like: “sure, her look is great, if you like things that obvious. She’s, like, the Hershey’s of hair.”
+            </p>
+            {% include 'modules/inline-ephemera.twig' with
+                {
+                    class: 'left',
+                    imgSrc: 'images/icons/heart.png'
+                }
+            %}
+            <p>
+                My unusual body type engendered a sense of “otherness,” which was not helped by all my best female friends passing the Happy Go Lucky Teen Test with flying colors; a mangle of long, thin limbs and flat chests and big grins and delicate feet that did not resemble rafts. My envy meant I got hard-wired with bad habits early on, such as persuading my best friend to swap a black strapless dress for a wildly unflattering high-waisted trousers-and-waistcoat ensemble for her fifteenth birthday. I lied about where I had bought early-noughties built-up flatform trainers when friends admired them. I did everything I could to throw hurdles in front of other girls so I, the lagger, could catch up with them in the beauty race.
+            </p>
+            <p>
+                I carried a sense of this competitiveness well into adulthood. I would almost test myself to see how long I could go without telling a woman who looked absolutely beautiful that she looked absolutely beautiful (normally three drinks). I would say transparently envious comments like: “sure, her look is great, if you like things that obvious. She’s, like, the Hershey’s of hair.”
+            </p>
+            {% include 'modules/blockquote.twig' with
+                {
+                    class: "",
+                    copy: "As a teenager, I was more shelving unit than female form…I had big boobs, big feet, wide shoulders and wide hips."
+                }
+            %}
+            <p>
+                My unusual body type engendered a sense of “otherness,” which was not helped by all my best female friends passing the Happy Go Lucky Teen Test with flying colors; a mangle of long, thin limbs and flat chests and big grins and delicate feet that did not resemble rafts. My envy meant I got hard-wired with bad habits early on, such as persuading my best friend to swap a black strapless dress for a wildly unflattering high-waisted trousers-and-waistcoat ensemble for her fifteenth birthday. I lied about where I had bought early-noughties built-up flatform trainers when friends admired them. I did everything I could to throw hurdles in front of other girls so I, the lagger, could catch up with them in the beauty race.
+            </p>
+            <p>
+                Aged 28, I now realize that beauty is an infinite, abundant matter. Womankind as a whole doesn’t get an allotted amount to fight over. We all have our own stock and it doesn’t skyrocket when we deny or put down others.
+                {% include 'modules/endmark.twig' %}
+            </p>
+            {% include 'modules/inline-shopping.twig' with
+                {
+                    title: "Shop this Article"
+                }
+            %}
+
+        {% endif %}
+
+        {% include 'modules/pdf.twig' with
+            {
+                imgSrc: "images/icons/margarita.png",
+
+                linkCopy: "Now that you're hungry...some frosty 'ritas"
+            }
+        %}
+
+        {% include 'modules/article-bottom.twig' %}
+
+        {% include 'modules/tag-share.twig' %}
+
+    </div>
+    <div class="right-rail slidingRail" id="right-rail">
+        {% if is250 %}
+            <div class="rail-slider-wrapper">
+                <div class="rail-slider-content">
+                {% include 'modules/side-ad.twig' with
+                    {
+                        adSrc: "images/side-ad-250.jpg",
+                        adSrcMobile: "images/side-ad-mobile.jpg"
+                    }
+                %}
+                {% include 'modules/side-share.twig' %}
+                </div>
+            </div>
+        {% elseif isMultiRail %}
+
+            <div class="rail-slider-wrapper">
+                <div class="rail-slider-content">
+                    {% include 'modules/side-ad.twig' with
+                        {
+                            adSrc: "images/side-ad.jpg",
+                            adSrcMobile: "images/side-ad-mobile.jpg"
+                        }
+                    %}
+                    {% include 'modules/side-share.twig' %}
+                </div>
+            </div>
+            <div class="rail-slider-wrapper">
+                <div class="rail-slider-content">
+                    {% include 'modules/headline-stack.twig' with
+                        {
+                            hasHeader: true,
+                            hasImage: true,
+                            headlines: [
+                                "Chrissy Teigen likes her stretch marks",
+                                "I’m Not Technically Shopping in January But…Should I Buy This?",
+                                "How to Fake Cool",
+                                "Delete These Photos Off Your Phone ASAP!"
+                            ]
+                        }
+                    %}
+                    {% include 'modules/side-share.twig' %}
+                </div>
+            </div>
+            <div class="rail-slider-wrapper">
+                <div class="rail-slider-content">
+                    {% include 'modules/side-ad.twig' with
+                        {
+                            adSrc: "images/side-ad.png",
+                            adSrcMobile: "images/side-ad-mobile.jpg"
+                        }
+                    %}
+                    {% include 'modules/side-share.twig' %}
+                </div>
+            </div>
+        {% else %}
+            <div class="rail-slider-wrapper">
+                <div class="rail-slider-content">
+                {% include 'modules/side-ad.twig' with
+                    {
+                        adSrc: "images/side-ad.jpg",
+                        adSrcMobile: "images/side-ad-mobile.jpg"
+                    }
+                %}
+                {% include 'modules/side-share.twig' %}
+                </div>
+            </div>
+        {% endif %}
+
+    </div>
+</section>
+<div class="recirc-and-comments">
+    <div class="next-steps">
+        <img src="images/spotim-3up.png">
+    </div>
+
+    <div class="comments">
+        <img src="images/spotim-comments.png">
+    </div>
+</div>

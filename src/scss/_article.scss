@@ -1,0 +1,318 @@
+// _article.scss
+
+.Article {
+    $mainColor: $sky;
+    $altColor: $grass;
+	//
+	background: rgba($mainColor, 0.02);
+    transition: background 0.3s;
+    position: relative;
+
+    .Top-ad {
+        display: none;
+    }
+
+    .border--generator {
+        padding: 0 6.8rem 0 6.8rem;
+
+        // Kill outlaying border/dimension alterations
+        .Paper-doll:before,
+        .Large-ad:before,
+        .Large-ad:after,
+        .border-accent {
+            display: none;
+        }
+
+        @media only screen and (max-width: 1279px) {
+            padding: 0;
+            .Footer {
+                padding: 0 7rem;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+    		padding: 1rem 2rem;
+
+            .Footer {
+                padding: 0;
+            }
+        }
+    }
+
+	.border {
+        min-height: 100vh;
+        overflow: hidden;
+        padding: 0 6.8rem 0 6.8rem;
+        position: relative;
+        transition: transform 0.7s;
+        width: 100%;
+
+        &:before {
+        	content: "";
+        	position: absolute;
+        	top: 0;
+        	left: 0;
+        	width: 0;
+        	height: 100%;
+        	border-left: 1.8rem solid $mainColor;
+            z-index: 0;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            border-right: 1.8rem solid $mainColor;
+            z-index: 0;
+        }
+
+        &.alternate {
+
+        	&:before {
+        		border-color: $blush;
+        	}
+        }
+
+        @media only screen and (max-width: 1279px) {
+            padding: 0;
+        }
+
+        @media only screen and (max-width: 767px) {
+    		padding: 1rem 2rem;
+
+    		&:before {
+    			border: 1rem solid $mainColor;
+    		}
+        }
+	}
+
+    .border-accent {
+		position: absolute;
+	    width: 100%;
+	    height: 50%;
+	    bottom: 0;
+	    left: 0;
+	    pointer-events: none;
+	    border: 1.8rem solid $altColor;
+	    border-top: 0;
+        z-index: 2;
+
+        &:before {
+			content: "";
+		    width: 1.8rem;
+		    height: calc(30vh + 3rem);
+		    position: absolute;
+		    top: -15vh;
+		    left: -1.8rem;
+		    z-index: 2;
+		    background: $altColor;
+        }
+
+        &:after {
+			content: "";
+		    width: 1.8rem;
+		    height: calc(45vh + 3rem);
+		    position: absolute;
+		    top: -45vh;
+		    right: -1.8rem;
+		    z-index: 2;
+		    background: $altColor;
+        }
+
+        &.alternate {
+        	border-color: $navy;
+
+        	&:before {
+        		background: $navy;
+        	}
+
+        	&:after {
+        		background: $navy;
+        	}
+        }
+
+        @media only screen and (max-width: 767px) {
+            border-width: 1rem;
+        }
+    }
+
+	a, a:hover, a:active, a:visited, a:link {
+		color: $dark-green;
+		font-size: 1.8rem;
+		text-decoration: none;
+		position: relative;
+
+		&:hover {
+
+		}
+	}
+
+	.Hero-content {
+	}
+
+	.Main-content {
+		display: block;
+		max-width: 128rem;
+		margin: 0 auto;
+
+		a, a:hover, a:active, a:visited, a:link {
+
+			&:before {
+				content: "";
+				position: absolute;
+				bottom: -0.1rem;
+				left: 0;
+				width: 100%;
+				height: 0.1rem;
+				background: $gold;
+				transition: all 0.3s;
+			}
+
+		    &:hover {
+		    	color: $gold;
+
+		    	&:before {
+		    		background: $black;
+		    	}
+		    }
+		}
+	}
+
+	.Side-ad {
+        padding: 0;
+        margin: 0 auto 1rem;
+	}
+
+	.Footer {
+		max-width: 128rem;
+	    margin: 0 auto 0;
+	    float: none;
+	    position: relative;
+
+	    .Newsletter {
+	    	border-color: $fog;
+
+	    	input {
+	    		background: transparent;
+	    	}
+	    }
+	}
+
+    &.alternate {
+        background: rgba($blush, 0.04);
+
+        .Footer {
+
+            .Newsletter {
+
+                input {
+                    background: $blush-tint;
+                }
+            }
+        }
+    }
+
+    .next-steps {
+        margin: 10rem 0 -10rem;
+        width: 100%;
+    }
+
+    .comments {
+        margin-bottom: 10rem;
+        //
+        width: 100%;
+    }
+
+    .slidingRail {
+        display: flex;
+        flex-direction: column;
+
+        @media only screen and (max-width: 1023px) {
+            display: none;
+        }
+
+        // ---=== OVERRIDES ===--- //
+        .Headline-stack {
+            padding: 0 30px;
+            a {
+                font-size: 2rem;
+            }
+        }
+        .flag {
+            margin: 0;
+        }
+        .right {
+            float: none;
+        }
+        .Side-share {
+            max-height: 8.5rem;
+            transform: translateX(0) translateY(0);
+            clear: right;
+            float: none;
+            transition: opacity .3s;
+        }
+
+        // ---=== ACTUAL STYLES ===--- //
+        .rail-slider-wrapper {
+            position: relative;
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 0;
+
+            .rail-slider-content {
+                position: relative;
+                top: 0;
+                bottom: auto;
+                max-width: 30rem;
+                margin-bottom: 40px;
+
+            }
+
+            // Last element shouldn't have bottom margin so that
+            // it can fully sync with wrapper base
+            &:last-child .rail-slider-content {
+                margin-bottom: 0;
+            }
+
+            &[mode=stuck] {
+                .rail-slider-content {
+                    position: fixed;
+                    top: 20px;
+                    bottom: auto;
+                }
+            }
+            &[mode=bottom] {
+                .rail-slider-content {
+                    position: absolute;
+                    bottom: 0px;
+                    top: auto;
+                }
+            }
+
+            &[mode=bottom]:last-child  .Side-share {
+                opacity: 0;
+            }
+        }
+
+
+    }
+}
+
+.recirc-and-comments {
+    width: calc(100% - 35rem);
+    max-width: 128rem;
+    padding: 0 7rem;
+    @media only screen and (max-width: 1023px) {
+        width: auto;
+        max-width: none;
+    }
+    @media only screen and (max-width: 767px) {
+        padding: 0 3rem;
+    }
+    @media only screen and (max-width: 500px) {
+        padding: 0 1rem;
+    }
+}

@@ -1,0 +1,293 @@
+{% extends 'layouts/layout.twig' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+	{% include 'modules/top-ad.twig' with
+		{
+			isHome: true
+		}
+	%}
+
+	{# NOTE: Switched this to new border generator. Just use old class 'border' to fall back #}
+	<div class="border--generator border--default">
+
+		<div class="content-wrapper">
+
+			<div class="Hero-content">
+
+				{% include 'shared/nav.twig' with
+					{
+						isHome: true,
+						isHeader: true
+					}
+				%}
+
+			</div>
+
+			<div class="Main-content">
+
+			    {% include 'modules/large-ad.twig' with
+			        {
+			            imgSrc: "images/big-ad.jpg"
+			        }
+			    %}
+
+				<div class="Hero-header">
+
+					<figure class="Hero-image portrait">
+    					<img src="images/hero-image.jpg" alt="FPO">
+    					<figcaption>
+    						<a href="#">Chanel Jacket</a>, <a href="#">skirt</a>, &amp; <a href="#">boots</a>. <a href="#">Walk of Shame</a> tank top, <a href="#">Maria Francesca Pepe</a> choker
+    					</figcaption>
+					</figure>
+
+					<div class="Hero-copy">
+
+						<div class="flair">
+							<img src="images/icons/hooters.png" alt="FPO">
+							<div class="title">
+								Trending
+							</div>
+						</div>
+
+						<div class="headline">
+							How to Wear Classic Pieces (in a Not-So-Classic Way)
+						</div>
+
+						<div class="dek">
+							Sweaters can be worn with just about anything.
+						</div>
+
+						<div class="meta">
+							<div class="byline">
+								Leandra Medine &amp; Haley Nahman
+							</div>
+							<div class="date">
+								1.10.17
+							</div>
+							<div class="tag">
+								Fashion
+							</div>
+						</div>
+
+						{% include 'modules/share-icons.twig' with {
+								hasCommentsCount: true
+							}
+						%}
+
+					</div>
+
+				</div>
+
+				{% include 'modules/article-copy.twig' with
+					{
+						hasCallout: true,
+						isMultiRail: true
+					}
+				%}
+
+				{% include 'modules/fpo.twig' with
+				    {
+				        copy: "Comments"
+				    }
+				%}
+
+				{% include 'modules/fpo.twig' with
+				    {
+				        copy: "Next Steps"
+				    }
+				%}
+
+				<div class="homepage-content">
+					<!-- Feature Four -->
+					<div class="Left-rail">
+
+						{% include 'modules/portrait-feature.twig' with
+						    {
+						    	imgSrc: "images/paltrow.png",
+						    	headline: "The Gwyneth Paltrow MR Chatroom",
+						    	hasDek: false,
+						    	dek: "MR Chatroom",
+						    	byline: "Leandra Medine",
+						    	class: "left normal-feature",
+						    	hasFlag: true,
+						        flagSrc1: "images/trophy1.png",
+						        flagSrc2: "images/trophy2.png",
+						        flagTitle: "MR Hall of Fame"
+						    }
+						%}
+
+						<div class="four-up">
+							{% include 'modules/feed-article.twig' with
+							    {
+							        class: "left",
+							        imgSrc: "images/article7.jpg",
+							        headline: "4 People Living and Thriving on the Gender Spectrum",
+							        byline: "Haley Nahman",
+							        dek: "When President Obama emerged last night in the city of blinding lights, his hometown of Chicago, he greeted an audience who wore their feelings on their sleeves",
+							        hasFlair: true,
+							        flairSrc: "images/icons/thoughts.png"
+							    }
+							%}
+
+
+							{% include 'modules/feed-article.twig' with
+							    {
+							        class: "left",
+							        imgSrc: "images/article8.jpg",
+							        headline: "Everything to Expect in the Year of the Fire Rooster",
+							        byline: "Amelia Diamond",
+
+							        hasFlair: false,
+							        flairSrc: "images/icons/phone.png"
+							    }
+							%}
+
+							{% include 'modules/feed-article.twig' with
+							    {
+							        class: "left",
+							        imgSrc: "images/article9.jpg",
+							        headline: "Mansur Gavriel is Making Clothes. Get Ready for Waitlists!",
+							        byline: "Haley Nahman",
+							        dek: "",
+							        hasFlag: false,
+							        flagSrc1: "images/green-mouth.png",
+									flagSrc2: "images/pink-mouth.png",
+									flagTitle: "Making Noise",
+									hasFlair: true,
+							        flairSrc: "images/icons/shoe.png"
+							    }
+							%}
+
+							{% include 'modules/feed-article.twig' with
+							    {
+							        class: "left",
+							        imgSrc: "images/article10.jpg",
+							        headline: "Mary Tyler Moore’s Legacy is More Important Than Ever",
+							        byline: "Harling Ross",
+							        hasDek: true,
+							        dek: "I now realize that beauty is an infinite, abundant matter.",
+							        hasFlair: false,
+							        flairSrc: "images/icons/shoe.png"
+							    }
+							%}
+						</div>
+
+						<div class="three-up">
+
+
+						</div>
+
+					</div>
+
+					<div class="Left-rail" style="margin-bottom: 10rem;">
+
+						<div class="four-up">
+							{% include 'modules/feed-article.twig' with
+							    {
+							        class: "left",
+							        imgSrc: "images/article1.jpg",
+							        headline: "Real Cool People, Real Cool Apartments: Kat Typaldos",
+							        byline: "Amelia Diamond",
+							        dek: "CHECK OUT THE TWO-BEDROOM HOME OF THE NYC-BASED STYLIST",
+							        hasFlair: true,
+							        flairSrc: "images/icons/thoughts.png"
+							    }
+							%}
+
+
+							{% include 'modules/feed-article.twig' with
+							    {
+							        class: "left",
+							        imgSrc: "images/article2.jpg",
+							        headline: "Is “No Hair Color” the New “No Makeup?”",
+							        byline: "Haley Nahman",
+
+							        hasFlair: false,
+							        flairSrc: "images/icons/phone.png"
+							    }
+							%}
+
+							{% include 'modules/feed-article.twig' with
+							    {
+							        class: "left",
+							        imgSrc: "images/article3.jpg",
+							        headline: "6 Things I Gave Up When I Moved to New York",
+							        byline: "Emily Zirimis",
+							        dek: "",
+							        hasFlag: false,
+							        flagSrc1: "images/green-mouth.png",
+									flagSrc2: "images/pink-mouth.png",
+									flagTitle: "Making Noise",
+									hasFlair: true,
+							        flairSrc: "images/icons/shoe.png"
+							    }
+							%}
+
+							{% include 'modules/feed-article.twig' with
+							    {
+							        class: "left",
+							        imgSrc: "images/article4.jpg",
+							        headline: "10 Works of Black Literature America Needs Right Now",
+							        byline: "R. Eric Thomas",
+							        hasDek: true,
+							        dek: "I now realize that beauty is an infinite, abundant matter.",
+							        hasFlair: false,
+							        flairSrc: "images/icons/shoe.png"
+							    }
+							%}
+						</div>
+
+						<div class="two-up">
+							{% include 'modules/feed-article.twig' with
+							    {
+							        class: "left",
+							        imgSrc: "images/article5.jpg",
+							        headline: "What Your Parents’ Divorce Means for Your Relationships",
+							        byline: "Helena Bala",
+							        hasDek: true,
+							        dek: "Will the past repeat itself?",
+							        hasFlair: true,
+							        flairSrc: "images/icons/thoughts.png"
+							    }
+							%}
+
+
+							{% include 'modules/feed-article.twig' with
+							    {
+							        class: "left",
+							        imgSrc: "images/article6.jpg",
+							        headline: "I’m a Woman Who Likes Sports:&nbsp;SO?",
+							        byline: "Jenna Gottlieb",
+							        hasDek: true,
+							        dek: "Why can't liking sports just make me a sports fan?",
+							        hasFlair: false,
+							        flairSrc: "images/icons/phone.png"
+							    }
+							%}
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			{% include 'shared/_footer.twig' %}
+
+		</div>
+
+		<div class="border-accent">
+		</div>
+
+	</div>
+
+	{% include 'modules/notification.twig' %}
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

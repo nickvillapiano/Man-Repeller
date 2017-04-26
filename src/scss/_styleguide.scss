@@ -1,0 +1,239 @@
+
+html, body {
+    &.styleguide-background {
+        background: $white;
+        color: $black;
+        @include open-sans;
+        font-size: 62.5%;
+        // normalize was updated to use 1.15 so this resets
+        line-height: normal;
+    }
+}
+
+.Styleguide {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 3rem;
+    background: $off-white;
+    box-shadow: 0 0 1.5rem 0 $grey-light;
+
+    @media all and (max-width: 550px) {
+        padding: 2rem;
+    }
+
+    nav {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        &#table-of-contents {
+            margin: 3rem 0 1rem;
+            max-width: 28rem;
+        }
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        img {
+            width: 12rem;
+        }
+    }
+    section {
+        margin-top: 10rem;
+        .section-content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            padding: 1rem;
+
+            &-col {
+                flex-direction: column;
+            }
+        }
+
+        .section-header,
+        .section-subheader {
+            margin: 0;
+            margin: 1.5rem 0 1rem;
+            // padding-bottom: 1rem;
+        }
+
+        .section-header {
+            color: $grey-dark;
+            @include oswald;
+            font-size: 6rem;
+            // text-transform: uppercase;
+            border-bottom: .1rem solid $grey-light;
+            //
+            color: $black;
+        }
+        .section-subheader {
+            color: $grey;
+            @include oswald-light;
+            font-size: 3rem;
+        }
+    }
+
+    // colors
+    .color-block {
+        width: calc( 100% / 6 );
+        min-width: 12rem;
+        .color {
+            height: 10rem;
+        }
+        .hex {
+            color: $grey;
+        }
+    }
+
+    footer {
+        margin: 2rem;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+///////
+
+.Styleguide {
+
+    opacity: 1 !important;
+
+    .Lookbook-modal {
+        display: none;
+    }
+
+    .font-title {
+        font-size: 3rem;
+        margin: 2rem 0 0 0;
+    }
+
+    .knockout50 {
+        @include knockout-50();
+    }
+
+    .knockout30 {
+        @include knockout-30();
+    }
+
+    .knockout48 {
+        @include knockout-48();
+    }
+
+    .knockout47 {
+        @include knockout-47();
+    }
+
+    .chronicle-display {
+        @include chronicle-display();
+    }
+
+    .chronicle-display-italic {
+        @include chronicle-display-italic();
+    }
+
+    .chronicle-display-semi-italic {
+        @include chronicle-semi-italic();
+    }
+
+    .chronicle-display-semi {
+        @include chronicle-semi();
+    }
+
+    .chronicle-display-black {
+        @include chronicle-black();
+    }
+
+    .chronicle-deck {
+        @include chronicle-deck();
+    }
+
+    .chronicle-deck-semi {
+        @include chronicle-deck-semi();
+    }
+
+    .chronicle-display-light {
+        @include chronicle-light();
+    }
+
+    .hex {
+        @include knockout-50();
+        text-transform: uppercase;
+        color: $grey;
+    }
+
+    .header-style {
+        @include chronicle-black();
+        font-size: 3rem;
+        line-height: 1;
+        transition: margin 0.3s;
+        margin: 2rem 0;
+    }
+
+    blockquote {
+        margin-top: 5rem;
+    }
+
+    .Quotation {
+        margin: 0;
+    }
+
+    #lists {
+        @include chronicle-deck();
+
+        ul {
+            width: 100%;
+        }
+    }
+
+    p {
+
+        &.List-header {
+            line-height: 0;
+            margin: 2rem 0;
+            display: inline-block;
+            max-width: calc(100% - 7rem);
+            width: 100%;
+
+            .list-icon {
+                @include knockout-47();
+                margin: 0 1rem 0 0;
+                //
+                font-size: calc(4rem + 4.5vw);
+
+                @media only screen and (min-width: 1280px) {
+                    font-size: 10rem;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    font-size: 7.2rem;
+                }
+            }
+
+            .list-title {
+                @include chronicle-semi();
+                letter-spacing: -0.5px;
+                line-height: 0.9;
+                display: inline-block;
+                //
+                font-size: calc(1.5rem + 1.6vw);
+                max-width: calc(100% - 20rem);
+                width: 100%;
+
+                @media only screen and (min-width: 1280px) {
+                    font-size: 3.6rem;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    font-size: 2.8rem;
+                }
+            }
+        }
+    }
+}

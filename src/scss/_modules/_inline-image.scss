@@ -1,0 +1,204 @@
+// _inline-image.scss
+
+.Inline-image {
+    width: 100%;
+    margin: 0 0 3rem;
+    position: relative;
+
+    .image-wrapper {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        .zoom-icon {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 3rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 2;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .pinterest {
+            position: absolute;
+            left: 1rem;
+            bottom: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 2;
+            max-width: 2.7rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    figcaption {
+        @include knockout-30;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        padding: 1.2rem 1rem;
+        max-height: 7.5rem;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        background: none;
+        border: none;
+        border-bottom: 0.3rem solid $black;
+        padding-left: 0;
+        position: relative;
+        padding-right: 3rem;
+
+        .caption {
+            font-size: 1.8rem;
+            margin: 0 0 1rem;
+            display: inline;
+            max-width: initial;
+        }
+
+        .shopping-links {
+            margin: 0 0 1rem;
+            display: inline;
+            max-width: initial;
+            font-size: 1.8rem;
+
+            a, a:hover, a:active, a:visited, a:link {
+                display: inline-block;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0.5rem !important;
+                    left: 0;
+                    width: 100%;
+                    height: 0.1rem;
+                    background: $gold;
+                }
+
+                &:hover {
+
+                }
+            }
+        }
+
+        .credits {
+            @include chronicle-semi();
+            margin: 2rem 0;
+            max-width: initial;
+
+            i {
+                @include chronicle-display-italic();
+            }
+        }
+
+        .caret {
+            position: absolute;
+            bottom: 1rem;
+            right: 2rem;
+            transform: rotate(180deg);
+            transition: 0.3s;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            svg {
+                width: 1.1rem;
+
+                .cls-1 {
+                    fill: $gold;
+                }
+            }
+        }
+
+        &.expand {
+            max-height: 30rem;
+
+            .caret {
+                bottom: 2rem;
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    &.inline-left {
+        max-width: 30rem;
+        margin: 0 4rem 3rem 0;
+        float: left;
+        transition: max-width 0.3s;
+
+        figcaption {
+
+            .caret {
+                right: 1rem;
+            }
+
+            .credits {
+            }
+        }
+
+
+        @media only screen and (max-width: 1100px) {
+            max-width: 25rem;
+        }
+
+        @media only screen and (max-width: 1023px) {
+            max-width: 30rem;
+            margin: 0 4rem 3rem 0;
+        }
+
+        @media only screen and (max-width: 767px) {
+            margin: 0 auto 3rem;
+            float: none;
+            max-width: 100%;
+        }
+    }
+
+    &.inline-right {
+        max-width: 30rem;
+        margin: 0 0 3rem 4rem;
+        float: right;
+        transition: max-width 0.3s;
+
+        @media only screen and (max-width: 1100px) {
+            max-width: 25rem;
+        }
+
+        @media only screen and (max-width: 1023px) {
+            max-width: 30rem;
+
+        }
+
+        @media only screen and (max-width: 767px) {
+            margin: 0 auto 3rem;
+            float: none;
+            max-width: 100%;
+        }
+    }
+
+    &:hover {
+
+        .image-wrapper {
+
+            .zoom-icon {
+                opacity: 1;
+            }
+
+            .pinterest {
+                opacity: 1;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1023px) {
+        width: 100%;
+        margin: 0 auto 3rem;
+    }
+}

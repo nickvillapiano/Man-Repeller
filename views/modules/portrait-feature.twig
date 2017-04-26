@@ -1,0 +1,37 @@
+<!-- Portrait Feature -->
+
+<section class="Portrait-feature {{class}}{% if isSquare %} square{% endif %}{% if isSlideshow %} slideshow{% endif %}{% if isBranded %} branded{% endif %}">
+    <div class="thumbnail">
+        <img src="{{imgSrc}}" alt="FPO">
+    </div>
+    <div class="copy">
+        {% if isSlideshow %}
+            <img class="icon" src="images/camera-icon.png" alt="Camera Icon">
+        {% endif %}
+        {% if isBranded %}
+            <div class="branded-flag">
+                <img src="{{flagSrc}}" alt="FPO">
+            </div>
+        {% endif %}
+        {% if hasFlag %}
+            {% include 'modules/flag.twig' %}
+        {% endif %}
+        <div class="headline">
+            <span>{{headline}}</span>
+        </div>
+        {% if hasDek %}
+            <div class="dek">
+                {{dek}}
+            </div>
+        {% endif %}
+        <div class="byline">
+            <span>{{byline}}</span>
+        </div>
+        {% if isSlideshow %}
+            <div class="photo-count">
+                {{numberOfPhotos}} Photos
+            </div>
+        {% endif %}
+    </div>
+</section>
+

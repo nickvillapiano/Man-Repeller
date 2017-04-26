@@ -1,0 +1,103 @@
+<!-- Inline shopping -->
+
+<section class="Inline-shopping {% if isInline %}inline{% endif %} {% if isHome %}inline-home{% endif %}">
+    <div class="title">
+        {{title}}
+    </div>
+    <div class="items">
+        {% if isInline %}
+            {% include 'modules/inline-shopping-item.twig' with
+                {
+                    price: "379",
+                    imgSrc: "images/shopping1.jpg",
+                    brand: "Chanel"
+                }
+            %}
+            {% include 'modules/inline-shopping-item.twig' with
+                {
+                    price: "1850.25",
+                    imgSrc: "images/shopping2.jpg",
+                    brand: "Walk of Shame"
+                }
+            %}
+            {% include 'modules/inline-shopping-item.twig' with
+                {
+                    price: "11.50",
+                    imgSrc: "images/shopping3.jpg",
+                    brand: "Creatures of Comfort"
+                }
+            %}
+            {% include 'modules/inline-shopping-item.twig' with
+                {
+                    price: "379",
+                    imgSrc: "images/shopping4.jpg",
+                    brand: "Hermés"
+                }
+            %}
+        {% else %}
+            {% include 'modules/inline-shopping-item.twig' with
+                {
+                    price: "379",
+                    imgSrc: "images/shopping5.png",
+                    brand: "Chanel"
+                }
+            %}
+            {% include 'modules/inline-shopping-item.twig' with
+                {
+                    price: "1850.25",
+                    imgSrc: "images/shopping6.png",
+                    brand: "Walk of Shame"
+                }
+            %}
+            {% include 'modules/inline-shopping-item.twig' with
+                {
+                    price: "11.50",
+                    imgSrc: "images/shopping7.png",
+                    brand: "Creatures of Comfort"
+                }
+            %}
+            {% include 'modules/inline-shopping-item.twig' with
+                {
+                    price: "379",
+                    imgSrc: "images/shopping8.png",
+                    brand: "Hermés"
+                }
+            %}
+            {% include 'modules/inline-shopping-item.twig' with
+                {
+                    price: "379",
+                    imgSrc: "images/shopping4.jpg",
+                    brand: "Gucci"
+                }
+            %}
+            {% include 'modules/inline-shopping-item.twig' with
+                {
+                    price: "379",
+                    imgSrc: "images/shopping3.jpg",
+                    brand: "Vintage"
+                }
+            %}
+            {% include 'modules/inline-shopping-item.twig' with
+                {
+                    price: "379",
+                    imgSrc: "images/shopping2.jpg",
+                    brand: "Isabel Marant"
+                }
+            %}
+            {% include 'modules/inline-shopping-item.twig' with
+                {
+                    price: "379",
+                    imgSrc: "images/shopping1.jpg",
+                    brand: "We Are The Superlative Conspiracy"
+                }
+            %}
+        {% endif %}
+    </div>
+    <div class="see-all">
+        {% if isHome %}
+            Shop MR Picks
+        {% else %}
+            See All 24
+        {% endif %}
+    </div>
+</section>

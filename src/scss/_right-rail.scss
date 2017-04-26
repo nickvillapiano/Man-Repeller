@@ -1,0 +1,46 @@
+// _right-rail.scss
+
+.Right-rail {
+    max-width: $rightrail-width;
+    //
+    width: 30rem;
+}
+
+.in-flow-rail {
+    display: none;
+}
+
+@media only screen and (max-width: 1023px) {
+
+    .Right-rail {
+        display: none;
+    }
+
+    .in-flow-rail {
+        max-width: initial;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0 0 1rem;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .Right-rail {
+        max-width: initial;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0 0 1rem;
+        align-items: center;
+        //
+        flex-direction: column;
+    }
+
+    .in-flow-rail {
+        display: none;
+    }
+}

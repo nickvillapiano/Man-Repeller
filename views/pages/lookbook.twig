@@ -1,0 +1,47 @@
+{% extends 'layouts/layout.twig' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+	{% include 'modules/top-ad.twig' with
+		{
+			isHome: true
+		}
+	%}
+
+	<div class="border">
+
+		<div class="content-wrapper">
+
+			<div class="Hero-content">
+
+				{% include 'shared/nav.twig' with
+					{
+						isHome: true,
+						isHeader: true
+					}
+				%}
+
+			</div>
+
+			<div class="Main-content">
+
+			{% include 'modules/slideshow-modal.twig' %}
+
+			</div>
+
+			{% include 'shared/_footer.twig' %}
+
+		</div>
+
+		<div class="border-accent">
+		</div>
+
+	</div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

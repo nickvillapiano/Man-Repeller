@@ -1,0 +1,126 @@
+// _blockquote.scss
+
+blockquote {
+    @include knockout-50();
+    line-height: 1;
+    text-align: center;
+    padding: 1rem 4rem 4rem;
+    font-size: calc(1rem + 2.5vw);
+    margin-bottom: 0;
+
+    //text-shadow fun
+    color: $dark-green;
+    text-shadow: 0rem 0rem 0rem $black;
+    transition: all 0.5s;
+
+    img {
+        width: 5.5rem;
+        min-height: 4rem;
+        display: block;
+        margin: 0 auto 2rem;
+    }
+
+    &.transform {
+        color: $white;
+        transform: translateX(-0.8rem) translateY(-0.8rem);
+        text-shadow: -0.1rem -0.1rem 0 $sky,
+                     0.0rem 0.0rem 0 $sky,
+                     0.0rem 0.1rem 0 $sky,
+                     0.1rem 0.0rem 0 $sky,
+                     0.1rem 0.1rem 0 $sky,
+                     0.2rem 0.2rem 0 $sky,
+                     0.3rem 0.3rem 0 $sky,
+                     0.4rem 0.4rem 0 $sky;
+    }
+
+    @media only screen and (min-width: 1280px) {
+        font-size: 4.2rem;
+    }
+
+    @media only screen and (max-width: 1023px) {
+        font-size: 3.6rem;
+    }
+
+    @media only screen and (max-width: 767px) {
+        padding: 0 2rem 4rem;
+        margin: 0;
+    }
+
+    &.inline-right {
+        max-width: 30rem;
+        float: right;
+        margin: 0 0 3rem 4rem;
+        padding: 4rem 2rem;
+        font-size: 3.6rem;
+        border-left: none;
+        border-top: none;
+        margin-bottom: 0;
+
+        &:before {
+            padding: 4rem 2rem;
+        }
+
+        &.transform {
+            text-shadow: -0.1rem -0.1rem 0 $sky,
+                         0.0rem 0.0rem 0 $sky,
+                         0.1rem 0.0rem 0 $sky,
+                         0.0rem 0.1rem 0 $sky,
+                         0.1rem 0.1rem 0 $sky,
+                         0.2rem 0.2rem 0 $sky,
+                         0.3rem 0.3rem 0 $sky,
+                         0.4rem 0.4rem 0 $sky,;
+        }
+
+        @media only screen and (max-width: 1100px) {
+            max-width: 25rem;
+        }
+
+        @media only screen and (max-width: 1023px) {
+            margin: 0 0 3rem 4rem;
+            max-width: 30rem;
+        }
+
+        @media only screen and (max-width: 767px) {
+            margin: 0 auto 3rem;
+            float: none;
+            max-width: 100%;
+        }
+    }
+
+    &.inline-left {
+        max-width: 30rem;
+        float: left;
+        font-size: 4.2rem;
+        padding: 0;
+        margin: 0 4rem 3rem -5rem;
+        border-right: none;
+        border-top: none;
+        margin-bottom: 0;
+
+        &.transform {
+            text-shadow: -0.1rem -0.1rem 0 $sky,
+                         0.0rem 0.0rem 0 $sky,
+                         0.1rem 0.0rem 0 $sky,
+                         0.0rem 0.1rem 0 $sky,
+                         0.1rem 0.1rem 0 $sky,
+                         0.2rem 0.2rem 0 $sky,
+                         0.3rem 0.3rem 0 $sky,
+                         0.4rem 0.4rem 0 $sky,;
+        }
+
+        @media only screen and (max-width: 1100px) {
+            max-width: 25rem;
+        }
+
+        @media only screen and (max-width: 1023px) {
+            margin: 0 4rem 3rem -2.5rem;
+            max-width: 30rem;
+        }
+
+        @media only screen and (max-width: 767px) {
+            margin: 0 auto 3rem;
+            float: none;
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,155 @@
+// _article-copy.scss
+
+.Article-copy {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    max-width: 128rem;
+    padding: 0 7rem;
+    position: relative;
+
+    p {
+        @include chronicle-deck;
+        font-size: 1.8rem;
+        color: $dark-green;
+        letter-spacing: 0.11px;
+        line-height: 1.88;
+        margin: 0 0 4rem;
+
+        &.preamble {
+            @include chronicle-deck-semi();
+
+            @media only screen and (max-width: 767px) {
+                line-height: 1.77;
+            }
+
+            &:first-letter {
+                @include knockout-47();
+                margin-bottom: 4rem;
+                vertical-align: top;
+                line-height: 1;
+                float: left;
+                margin: -1.5vw 1rem 0 0;
+                font-size: calc(2rem + 13vw);
+                color: $white;
+                text-shadow: -0.1rem -0.1rem 0 $sky,
+                             0.0rem 0.0rem 0 $sky,
+                             0.1rem 0.1rem 0 $sky,
+                             0.2rem 0.2rem 0 $sky,
+                             0.3rem 0.3rem 0 $sky,
+                             0.4rem 0.4rem 0 $sky;
+
+                @media only screen and (min-width: 1280px) {
+                    font-size: 20rem;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    font-size: 10rem;
+                    margin: -0.7rem 1rem -1rem;
+                }
+            }
+        }
+
+        &.article-header {
+            @include chronicle-black();
+            font-size: 3rem;
+            line-height: 1;
+            transition: margin 0.3s;
+            margin: 5rem 0 2rem 0;
+        }
+    }
+
+    .left-rail {
+
+        @media only screen and (max-width: 767px) {
+            width: 100%;
+        }
+    }
+
+    .right-rail {
+        min-width: 30rem;
+        margin: 0 0 0 5rem;
+        overflow: hidden;
+
+        @media only screen and (max-width: 1023px) {
+            width: 0;
+            max-width: 0;
+            min-width: 0;
+            margin: 0;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        padding: 0;
+    }
+
+    &.fixed {
+
+        .left-rail {
+            width: calc(100% - 35rem);
+            position: relative;
+            z-index: 2;
+
+            @media only screen and (max-width: 1023px) {
+                padding-right: 0;
+                width: 100%;
+            }
+        }
+
+        .right-rail {
+            position: fixed;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            width: calc(100% - 13.8rem);
+            max-width: 128rem;
+            padding: 0 7rem;
+            height: 100%;
+
+            @media only screen and (max-width: 1279px) {
+                max-width: 100%;
+                width: 100%;
+                padding: 0 7rem;
+            }
+
+            @media only screen and (max-width: 1023px) {
+                display: none;
+            }
+        }
+    }
+
+    &.absolute {
+
+        .left-rail {
+            padding-right: 35rem;
+
+            @media only screen and (max-width: 1023px) {
+                padding-right: 0;
+            }
+        }
+
+        .right-rail {
+            position: absolute;
+            top: initial;
+            bottom: 4rem;
+            left: initial;
+            right: 0;
+            transform: none;
+            margin: 0;
+            width: calc(100% - 13.8rem);
+            max-width: 128rem;
+            padding: 0 7rem;
+
+            @media only screen and (max-width: 1279px) {
+                max-width: 100%;
+                width: 100%;
+                padding: 0 7rem;
+            }
+
+            @media only screen and (max-width: 1023px) {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+{% extends 'layouts/layout.twig' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+	{% include 'modules/top-ad.twig' with
+		{
+			isHome: true
+		}
+	%}
+
+	<div class="border--generator border--sky-ruby">
+
+		<div class="content-wrapper">
+
+			<div class="Hero-content">
+
+				{% include 'shared/nav.twig' with
+					{
+						isHome: true,
+						isHeader: true
+					}
+				%}
+
+			</div>
+
+			<div class="Main-content">
+
+				<div class="Hero-header">
+		            {% include 'modules/collaboration-header.twig' with
+		                {
+		                	isOnText: true,
+		                    copy: 'a partnership with <a href="#">Zappos</a>*'
+		                }
+		            %}
+
+					<div class="Hero-copy">
+
+						<div class="headline">
+							Intersexism Finally Has A Boldface Advocate: Hanne Gaby Odiele
+						</div>
+
+						<div class="dek">
+							Intersexism currently suffers a dangerous taboo.
+						</div>
+
+						<div class="meta">
+							<div class="byline">
+								Haley Nahman
+							</div>
+							<div class="date">
+								1.10.17
+							</div>
+							<div class="tag">
+								Fashion
+							</div>
+						</div>
+
+						{% include 'modules/share-icons.twig' %}
+
+					</div>
+
+				</div>
+
+				{% include 'modules/article-copy.twig' with
+					{
+						includeInlineSlideshow: true,
+						disableVideo: true
+					}
+				%}
+				{% include 'modules/fpo.twig' with
+				    {
+				        copy: "Comments"
+				    }
+				%}
+
+				{% include 'modules/fpo.twig' with
+				    {
+				        copy: "Next Steps"
+				    }
+				%}
+
+			</div>
+
+			{% include 'shared/_footer.twig' %}
+
+		</div>
+
+		<div class="border-accent">
+		</div>
+
+	</div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

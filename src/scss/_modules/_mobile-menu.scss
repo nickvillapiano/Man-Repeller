@@ -1,0 +1,136 @@
+// _mobile-menu.scss
+
+.Nav {
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .inner-navs {
+            padding: 6rem 4rem 0;
+            width: 100%;
+
+            .cat-nav {
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+
+                li {
+                    display: flex;
+                    align-items: flex-end;
+                    margin: 0 0 1rem;
+
+                    .icons {
+                        width: 4.3rem;
+                        margin: 0 1rem 0 0;
+
+                        img {
+                            max-height: 4.3rem;
+                        }
+                    }
+
+                    a, a:hover, a:active, a:visited, a:link {
+                        color: $white;
+                        font-size: 3.4rem;
+
+                        &:hover {
+
+                        }
+                    }
+
+                    &.mrtreats {
+                        width: 20rem;
+                        height: 5rem;
+                        padding: 0 1rem 0.5rem;
+
+                        img {
+                            width: 2.6rem;
+                        }
+
+                        a, a:hover, a:active, a:visited, a:link {
+                            font-size: 2.8rem;
+
+                            &:hover {
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .what-is-man-repeller {
+                border: 0.2rem solid rgba(white, 0.05%);
+                border-left: 0;
+                border-right: 0;
+                padding: 1.5rem 0 1rem;
+                margin: 1.5rem 0 0;
+
+                a, a:hover, a:active, a:visited, a:link {
+                    @include knockout-48();
+                    font-size: 2.4rem;
+                    color: $white;
+                    letter-spacing: -0.08px;
+                    text-transform: uppercase;
+                    box-shadow: inset 0rem -0.2rem $dark-green,
+                                inset 0 -0.3rem $gold;
+
+                    &:hover {
+                        color: $gold;
+                        box-shadow: inset 0rem -0.2rem $dark-green,
+                                    inset 0 -0.3rem $white;
+                    }
+                }
+            }
+
+            .social-nav {
+                display: flex;
+                justify-content: space-between;
+                margin: 0 0 3rem;
+                padding: 1.5rem 0 1rem;
+                border-bottom: 0.2rem solid rgba(white, 0.05%);
+
+                li {
+                    margin: 0 1.5rem 0 0;
+
+                    &:last-of-type {
+                        margin: 0;
+                    }
+
+                    a, a:hover, a:active, a:visited, a:link {
+
+                        img {
+                            max-height: 2.8rem;
+                            margin: 0;
+                        }
+
+                        &:hover {
+
+                        }
+                    }
+                }
+            }
+
+            .monthly-theme {
+                background: $blush;
+                color: $white;
+                @include knockout-48();
+                font-size: 3.5rem;
+                letter-spacing: -0.1px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1.2rem 0;
+
+                img {
+                    max-width: 5rem;
+                    margin: -2rem -1rem 0 0;
+                }
+
+                span {
+
+                }
+            }
+        }
+    }
+}

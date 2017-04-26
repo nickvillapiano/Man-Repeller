@@ -1,0 +1,49 @@
+// _list-header.scss
+
+.Article-copy {
+
+    p {
+
+        &.List-header {
+            line-height: 0;
+            margin: 2rem 0;
+            display: inline-block;
+            max-width: calc(100% - 7rem);
+            width: 100%;
+
+            .list-icon {
+                @include knockout-47();
+                margin: 0 1rem 0 0;
+                //
+                font-size: calc(4rem + 4.5vw);
+
+                @media only screen and (min-width: 1280px) {
+                    font-size: 10rem;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    font-size: 7.2rem;
+                }
+            }
+
+            .list-title {
+                @include chronicle-semi();
+                letter-spacing: -0.5px;
+                line-height: 0.9;
+                display: inline-block;
+                //
+                font-size: calc(1.5rem + 1.6vw);
+                max-width: calc(100% - 7rem);
+                width: 100%;
+
+                @media only screen and (min-width: 1280px) {
+                    font-size: 3.6rem;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    font-size: 2.8rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+// _newsletter.scss
+
+.Newsletter {
+    width: 100%;
+    @include knockout-50;
+    border: 1rem solid $border-grey;
+    padding: 2rem 2rem 2rem 4rem;
+    position: relative;
+    margin: 0 0 3rem;
+
+    .flair {
+        position: absolute;
+        top: -2rem;
+        left: -3.5rem;
+        max-width: 8.4rem;
+        transform: rotate(-22deg);
+
+        img {
+            max-height: 5rem;
+        }
+    }
+
+    .copy {
+        @include inline-vertical;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        width: 33.333%;
+
+        span {
+            text-transform: none;
+            display: block;
+            font-weight: 400;
+        }
+    }
+
+    .sign-up {
+        @include inline-vertical;
+        width: calc(66.666% - 0.3rem);
+
+        input {
+            display: inline-block;
+            vertical-align: bottom;
+            width: calc(90% - 20.3rem);
+            margin: 0 10% 0 0;
+            @include chronicle-display();
+            text-align: left;
+            font-size: 1.8rem;
+            border: none;
+            border-bottom: 0.2rem solid $black;
+            color: $black;
+            padding: 1rem;
+        }
+
+        input::-webkit-input-placeholder {
+            color: $grey;
+            @include chronicle-display-italic();
+        }
+
+        button {
+            display: inline-block;
+            border: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+
+    .Newsletter {
+        width: calc(100% - 4rem);
+        margin-left: 2rem;
+
+        .copy {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        .sign-up {
+            margin: 2rem auto 0;
+            display: block;
+            width: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .Newsletter {
+        width: calc(100% - 0rem);
+        margin-left: 0;
+        padding: 4rem 2rem;
+
+        .sign-up {
+            width: calc(100% - 4rem);
+
+            input {
+                display: block;
+                width: 100%;
+                margin: 0 0 2rem 0;
+            }
+
+            .button {
+                margin: 0 auto;
+                display: block;
+                max-width: 100%;
+            }
+        }
+    }
+}

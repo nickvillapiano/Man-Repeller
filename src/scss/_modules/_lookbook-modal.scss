@@ -1,0 +1,494 @@
+// _lookbook-modal.scss
+
+$topBarHeight: 6.7rem;
+
+.Lookbook-modal {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    position: absolute;
+    pointer-events: all;
+    overflow: hidden;
+    opacity: 1;
+    z-index: 9999;
+    transform: translateY(-100vh);
+    transition: 0.6s;
+    background-color: $grey18;
+
+    &.expand {
+        transform: none;
+    }
+
+    .title-bar {
+        background-color: $black;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 1rem 4.8rem 1rem 2.2rem;
+        min-height: $topBarHeight;
+        z-index: 5;
+        // border-bottom: 2px solid $sky;
+        border-bottom: 3px solid $navy;
+        @media only screen and (max-width: 1023px) {
+            padding: 1rem 3.3rem 1rem 2.2rem;
+        }
+        @media only screen and (max-width: 400px) {
+            padding: 1rem 2.2rem;
+        }
+
+        .lookbook-logo {
+            display: flex;
+            align-items: center;
+            align-content: flex-start;
+            position: relative;
+
+            img {
+                width: 9rem;
+                position: absolute;
+                // top: 0;
+                top: -10px;
+                left: 0;
+                z-index: 1;
+                @media only screen and (max-width: 1023px) {
+                    width: 3rem;
+                    top: 0;
+                }
+            }
+
+            .title {
+                @include chronicle-semi-italic();
+                font-size: 3rem;
+                flex-grow: 1;
+                margin: 0 0 0 11rem;
+                @include text-overflow();
+
+                @include knockout-48;
+                font-size: 24px;
+                letter-spacing: 10px;
+                text-transform: uppercase;
+                // line-height: 48px;
+
+                @media only screen and (max-width: 1023px) {
+                    font-size: 2.4rem;
+                    margin-left: 4rem;
+                }
+
+                @media only screen and (max-width: 400px) {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .controls {
+            padding: 0 0 0 2rem;
+            margin: 0 0 0 2rem;
+            border-left: 0.1rem solid $border-divider-grey;
+
+            @media only screen and (max-width: 400px) {
+                display: none;
+            }
+
+            @media only screen and (max-width: 1023px) {
+                padding: 0 0 0 1rem;
+                margin: 0 0 0 1rem;
+            }
+
+            .shuffle {
+                display: flex;
+                align-items: center;
+                margin: 0.6rem 0 0 0;
+
+                svg {
+                    width: 2rem;
+                    margin: 0 0.5rem 0 0;
+                    @media only screen and (max-width: 1023px) {
+                        width: 1.4rem;
+                    }
+
+                    .cls-1 {
+                        // fill: $white;
+                        fill: $gold;
+                    }
+
+                }
+
+                span {
+                    @include knockout-50();
+                    font-size: 1.6rem;
+                    text-transform: uppercase;
+                    margin-top: 3px;
+                }
+            }
+        }
+
+        .article {
+            @include chronicle-display-italic();
+            font-size: 2rem;
+            flex-grow: 1;
+            text-align: right;
+            margin: 0 0 0 4rem;
+
+            a, a:hover, a:active, a:visited, a:link {
+                @include chronicle-semi();
+                font-size: 2rem;
+                color: $white;
+                margin: 0 0 0 0.5rem;
+                position: relative;
+                box-shadow: inset 0 -1px $white;
+                transition: all .3s;
+
+                &:hover {
+                    color: $gold;
+                    box-shadow: inset 0 -1px transparent;
+                }
+            }
+
+            @media only screen and (max-width: 1023px) {
+                display: none;
+            }
+
+        }
+
+        .timestamp {
+            @include knockout-30();
+            font-size: 1.6rem;
+            padding: 0 0 0 2rem;
+            margin: 0 0 0 2rem;
+            border-left: 0.1rem solid $border-divider-grey;
+            white-space: nowrap;
+
+            @media only screen and (max-width: 1023px) {
+                display: none;
+            }
+        }
+
+        .x-close {
+            border-left: 0.1rem solid $border-divider-grey;
+            margin: 0 0 0 2rem;
+            padding: 0 0 0 2rem;
+
+            @media only screen and (max-width: 1023px) {
+                border-left: 0;
+                margin-left: auto;
+            }
+
+            svg {
+                width: 1.9rem;
+                .cls-1 {
+                    fill: $white;
+                    transition: all 0.3s;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                svg {
+                    .cls-1 {
+                        fill: $gold;
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            left: 2.8rem;
+            transform: translateY(-50%);
+            z-index: 1;
+            background-color: transparent;
+            border-radius: 50%;
+            width: 6.5rem;
+            height: 6.5rem;
+            transition: background-color 0.3s;
+
+            @media only screen and (max-width: 1023px) {
+                left: 0.8rem;
+            }
+
+            @media only screen and (max-width: 767px) {
+                display: none;
+            }
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-65%, -50%, 0);
+                .cls-1 {
+                    fill: $white;
+                    transition: fill 0.3s;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.left-arrow {
+
+            }
+
+            &.right-arrow {
+                left: initial;
+                right: 2.8rem;
+                transform: translateY(-50%) rotate(180deg);
+                @media only screen and (max-width: 1023px) {
+                    right: 0.8rem;
+                }
+            }
+        }
+
+        .image {
+
+            figure {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $black;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .pinterest {
+            width: 3.5rem;
+            position: absolute;
+            bottom: 1.7rem;
+            left: 1.7rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .lookbook-caret-mobile {
+            display: none;
+            position: absolute;
+            bottom: 1.7rem;
+            right: 1.7rem;
+            border-radius: 50%;
+            width: 5.5rem;
+            height: 5.5rem;
+            transition: all 0.3s;
+            cursor: pointer;
+
+            svg {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -65%, 0);
+                transition: all 0.3s;
+                width: 2rem;
+                height: 1.4rem;
+                .cls-1 {
+                    fill: $gold;
+                }
+            }
+
+            @media only screen and (max-width: 1023px) {
+                display: block;
+                // Get it above the footer-bar layer
+                z-index: 10;
+                bottom: 1.7rem;
+                &.expand {
+                    bottom: calc(100% - #{$topBarHeight});
+                    svg {
+                        transform: translate3d(-50%, -65%, 0) rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bar {
+        background: $black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include knockout-50();
+        font-size: 2rem;
+        padding: 2.4rem 5.2rem;
+        position: relative;
+        z-index: 1;
+        min-height: 7rem;
+        transition: all .3s;
+        border-top: 3px solid $navy;
+
+        @media only screen and (max-width: 1279px) {
+            font-size: 1.8rem;
+        }
+
+        @media only screen and (max-width: 1023px) {
+            transform: translate3d(0, 100%, 0);
+            position: absolute;
+            height: calc(100vh - #{$topBarHeight});
+            background: rgba($grey18, 0.9);
+            top: $topBarHeight;
+            font-size: 2rem;
+        }
+
+        @media only screen and (max-width: 500px) {
+            padding: 3rem;
+        }
+
+        a, a:hover, a:active, a:visited, a:link {
+            color: $white;
+            box-shadow: inset 0 -1px $white;
+
+            &:hover {
+                color: $gold;
+                box-shadow: inset 0 -1px transparent;
+                transition: all .3s;
+            }
+        }
+
+        .footer-defaults {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            @media only screen and (max-width: 1023px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .divider {
+            border-left: 0.1rem solid $border-divider-grey;
+            margin-left: 2rem;
+            padding-left: 2rem;
+
+            @media only screen and (max-width: 1023px) {
+                border-left: 0;
+                margin-left: 0;
+                padding-left: 0;
+            }
+        }
+
+        .article {
+            display: none;
+            @include chronicle-display-italic();
+
+            @media only screen and (max-width: 1023px) {
+                display: block;
+            }
+        }
+
+        .shopping-links {
+            flex-grow: 1;
+            a {
+                font-size: 2rem;
+                @include knockout-50();
+                @media only screen and (max-width: 1279px) {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        .credits {
+            @include chronicle-semi();
+            font-size: 1.6rem;
+            width: 100%;
+            overflow: hidden;
+            padding: 0;
+            max-height: 0;
+            opacity: 0;
+            transition: all .3s;
+
+            i {
+                @include chronicle-display-italic();
+            }
+
+            @media only screen and (max-width: 1023px) {
+                opacity: 1;
+                max-height: none;
+                font-size: 2rem;
+            }
+        }
+
+        .article,
+        .title,
+        .shopping-links,
+        .credits {
+            @media only screen and (max-width: 1023px) {
+                font-size: 2.4rem;
+                margin-bottom: 3rem;
+                a {
+                    font-size: 2.4rem;
+                }
+            }
+            @media only screen and (max-width: 500px) {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+                a {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        .lookbook-caret {
+            transform-origin: center 0.7rem;
+            transition: 0.3s;
+            width: 2rem;
+            height: 1.4rem;
+            margin-left: auto;
+
+            @media only screen and (max-width: 1023px) {
+                // position: absolute;
+                // top: 30px;
+                // right: 30px;
+                display: none;
+            }
+
+            &:hover {
+                cursor: pointer;
+                // transform: rotate(180deg) translateY(-0.5rem);
+            }
+
+            svg {
+                display: block;
+                .cls-1 {
+                    fill: $gold;
+                }
+            }
+        }
+
+        &.expand {
+
+            @media only screen and (max-width: 1023px) {
+                transform: translate3d(0, 0, 0);
+            }
+
+            .credits {
+                padding: 15px 0 0 0;
+                max-height: 10rem;
+                opacity: 1;
+                @media only screen and (max-width: 1023px) {
+                    max-height: none;
+                    padding: 0;
+                }
+            }
+            .lookbook-caret {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

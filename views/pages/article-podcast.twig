@@ -1,0 +1,109 @@
+{% extends 'layouts/layout.twig' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+	{% include 'modules/top-ad.twig' with
+		{
+			isHome: true
+		}
+	%}
+
+	{% include 'modules/podcast-bar.twig' %}
+
+	<div class="border--generator border--default">
+
+		<div class="content-wrapper">
+
+			<div class="Hero-content">
+
+				{% include 'shared/nav.twig' with
+					{
+						isHome: true,
+						isHeader: true
+					}
+				%}
+
+			</div>
+
+			<div class="Main-content">
+
+				<div class="Hero-header">
+
+					<div class="podcast-cover">
+						<img src="images/monocycle.png" alt="FPO">
+					</div>
+					<div class="copy">
+						<div class="meta">
+							<div class="title">
+								Monocycle: Episode 47
+							</div>
+							<div class="headline">
+								The Pursuit of More Than Cool
+							</div>
+							<div class="byline">
+								Leandra Medine
+							</div>
+							{% include 'modules/share-icons.twig' %}
+						</div>
+						<div class="player">
+							<div class="play-icon">
+								<svg id="play-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.66 49.66">
+								  <title>play-button</title>
+								  <g id="Article---Podcast">
+								    <g id="mr-article-desktop_Feature-Portrait-Copy" data-name="mr-article-desktop Feature-Portrait-Copy">
+								      <g id="header-lockup---left">
+								        <g id="playbutton">
+								          <g id="Group">
+								            <circle id="Oval" class="cls-1" cx="24.83" cy="24.83" r="24.83"/>
+								            <polygon id="Triangle" class="cls-2" points="31.24 24.83 23.23 32.04 23.23 17.62 31.24 24.83"/>
+								          </g>
+								        </g>
+								      </g>
+								    </g>
+								  </g>
+								</svg>
+							</div>
+							<div class="episode">
+								Play Episode 47
+							</div>
+							<div class="via">
+								Via SoundCloud
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+				{% include 'modules/article-copy.twig' %}
+
+				{% include 'modules/fpo.twig' with
+				    {
+				        copy: "Comments"
+				    }
+				%}
+
+				{% include 'modules/fpo.twig' with
+				    {
+				        copy: "Next Steps"
+				    }
+				%}
+
+			</div>
+
+			{% include 'shared/_footer.twig' %}
+
+		</div>
+
+		<div class="border-accent">
+		</div>
+
+	</div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

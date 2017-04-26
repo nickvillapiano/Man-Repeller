@@ -1,0 +1,75 @@
+// _paper-doll.scss
+
+.Paper-doll {
+    width: 52rem;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+
+    img {
+        max-height: 12.5rem;
+    }
+
+    .paper-doll1 {
+        transform: translateX(-100%) translateX(1rem);
+        position: relative;
+        z-index: -1;
+
+        @media only screen and (max-width: 1400px) {
+            visibility: hidden;
+        }
+
+        @media only screen and (max-width: 875px) {
+            display: none;
+        }
+    }
+
+    .paper-doll2 {
+        transform: translateX(100%) translateX(-2.5rem);
+
+        @media only screen and (max-width: 1250px) {
+            visibility: hidden;
+        }
+
+        @media only screen and (max-width: 985px) {
+            display: none;
+        }
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -1.3rem;
+        left: -50vw;
+        width: 200vw;
+        height: 2rem;
+        background: $blue;
+        z-index: 2;
+
+        @media only screen and (max-width: 875px) {
+            display: none;
+        }
+    }
+
+    &.alternate {
+
+        &:before {
+            background: $blush;
+        }
+    }
+}
+
+.Home {
+
+    .Paper-doll {
+
+        &:before {
+            display: none;
+        }
+    }
+}

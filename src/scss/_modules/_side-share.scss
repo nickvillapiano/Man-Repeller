@@ -1,0 +1,96 @@
+// _side-share.scss
+
+.Side-share {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    //
+    width: 30rem;
+    float: right;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateX(150%) translateY(-100%);
+    transition: all 0.4s;
+    margin: 0;
+    padding: 0;
+
+
+    .ephemera {
+        width: 100%;
+    }
+
+    .meta {
+        text-align: center;
+        //
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 1rem;
+        flex-grow: 1;
+        //
+        position: absolute;
+        top: 2.2rem;
+        right: 1.1rem;
+        z-index: 2;
+
+        .title {
+            font-size: 1.8rem;
+            @include knockout-30();
+            text-transform: uppercase;
+            letter-spacing: -0.13px;
+            //
+            white-space: nowrap;
+            font-size: 1.6rem;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .share-icons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a, a:hover, a:active, a:visited, a:link {
+                max-width: 2rem;
+                margin: 0 0 0 0.7rem;
+
+                &:hover {
+
+                }
+
+                &:before {
+                    display: none;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    max-width: 3rem;
+                }
+            }
+        }
+    }
+}
+
+.fixed {
+
+    .Side-share {
+        max-height: 8.5rem;
+        transform: translateX(0) translateY(0);
+        clear: right;
+    }
+}
+
+.absolute {
+
+    .Side-share {
+        max-height: 8.5rem;
+        transform: translateX(0) translateY(0);
+        clear: right;
+    }
+}
+
+.Tag-share {
+
+    .Side-share {
+        max-height: 8.5rem;
+        transform: translateX(0) translateY(0);
+    }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="17px" viewBox="0 0 24 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>email</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-87.000000, -414.000000)" fill="#232B2B">
+            <g id="top-nav-B" transform="translate(-668.000000, -550.000000)">
+                <g id="nav-items" transform="translate(755.000000, 959.000000)">
+                    <g id="Group">
+                        <g id="email" transform="translate(0.000000, 5.000000)">
+                            <g id="Layer_1">
+                                <polygon id="Shape" points="12.00024 11.4253161 12.00024 11.4255871 12 11.4253161 0 1.79024516 0 16.5677419 24 16.5677419 24 1.79051613"></polygon>
+                                <polygon id="Shape" points="23.87928 0 0.12096 0 12 9.51015484"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

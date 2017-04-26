@@ -1,0 +1,106 @@
+{% extends 'layouts/layout.twig' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+	{% include 'modules/top-ad.twig' with
+		{
+			isHome: true
+		}
+	%}
+
+	<div class="border--generator border--navy-grass">
+
+		<div class="content-wrapper">
+
+			<div class="Hero-content">
+
+				{% include 'shared/nav.twig' with
+					{
+						isHome: true,
+						isHeader: true
+					}
+				%}
+
+			</div>
+
+			<div class="Main-content">
+
+				<div class="Hero-header">
+
+					<figure class="Hero-image portrait">
+    					<img src="images/article-long.jpg" alt="FPO">
+					</figure>
+
+					<div class="Hero-copy">
+
+						{#
+							<div class="flair">
+								<img src="images/icons/hooters.png" alt="FPO">
+								<div class="title">
+									Trending
+								</div>
+							</div>
+						#}
+
+						<div class="headline">
+							What Eating 15 Different Breakfasts Taught Me
+						</div>
+
+						<div class="dek">
+							(and might teach you, if you also suck at breakfast)
+						</div>
+
+						<div class="meta">
+							<div class="byline">
+								Haley Nahman
+							</div>
+							<div class="date">
+								2.17.17
+							</div>
+							<div class="tag">
+								Fashion
+							</div>
+						</div>
+
+						{% include 'modules/share-icons.twig' %}
+
+					</div>
+
+				</div>
+
+				{% include 'modules/article-copy-long.twig' with
+					{
+						isMultiRail: true
+					}
+				%}
+
+				{% include 'modules/fpo.twig' with
+				    {
+				        copy: "Comments"
+				    }
+				%}
+
+				{% include 'modules/fpo.twig' with
+				    {
+				        copy: "Next Steps"
+				    }
+				%}
+
+			</div>
+
+			{% include 'shared/_footer.twig' %}
+
+		</div>
+
+		<div class="border-accent">
+		</div>
+
+	</div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

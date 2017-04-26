@@ -1,0 +1,61 @@
+// _article-bottom.scss
+
+.Article-bottom {
+    margin: 3rem 0 1rem 0;
+
+    .byline-entry {
+        padding: 1.5rem 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 0.2rem solid $fog;
+    }
+
+    .byline-image {
+        max-width: 8rem;
+    }
+
+    .row {
+        margin-left: 1.8rem;
+    }
+
+    .byline {
+        @include chronicle-display();
+        font-size: 2.4rem;
+        margin: 1rem 0 0;
+
+        &:before {
+            content: "by";
+            @include chronicle-display-italic();
+        }
+    }
+
+    .blurb {
+        font-size: 1.6rem;
+        @include chronicle-semi-italic();
+        line-height: 1.5;
+        margin: 4px 0 0 0;
+        max-width: 56rem;
+        letter-spacing: 0.2px;
+    }
+
+    .twitter {
+        max-width: 2.5rem;
+        margin: 0 0 2rem;
+
+        a, a:hover, a:active, a:visited, a:link {
+
+            img {
+
+            }
+
+            &:hover {
+
+            }
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+}

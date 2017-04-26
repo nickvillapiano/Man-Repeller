@@ -1,0 +1,26 @@
+// _inline-ephemera.scss
+
+.Inline-ephemera {
+    max-width: 10rem;
+    display: inline-block;
+
+    &.left {
+        margin: 0 3rem 0 -3.5rem;
+    }
+
+    &.right {
+        margin: 0 -1.5rem 0 1.5rem;
+    }
+
+    @media only screen and (max-width: 767px) {
+        max-width: 7rem;
+
+        &.left {
+            margin: 0 2rem 0 0;
+        }
+
+        &.right {
+            margin: 0 2rem 0 0;
+        }
+    }
+}

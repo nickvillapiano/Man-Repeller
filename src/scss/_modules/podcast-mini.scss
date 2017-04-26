@@ -1,0 +1,183 @@
+// _podcast-mini.scss
+
+.Podcast-mini {
+    background: $dark-green;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+    flex-grow: 1;
+
+    @media only screen and (max-width: 767px) {
+        flex-direction: column;
+        margin: 2rem auto 5rem;
+    }
+
+    .copy {
+        color: $white;
+        padding: 2rem 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+
+        @media only screen and (max-width: 767px) {
+            padding: 2rem;
+        }
+
+        .meta {
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .title {
+                @include chronicle-semi-italic();
+                font-size: calc(0.5rem + 2vw);
+                margin: 0 0 1rem;
+
+                @media only screen and (min-width: 1440px) {
+                    font-size: 2.4rem;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    font-size: 2.4rem;
+                }
+            }
+
+            .headline {
+                @include knockout-50();
+                font-size: calc(0.5rem + 4vw);
+                line-height: 0.8;
+                margin: 0 0 1rem;
+
+                @media only screen and (min-width: 1440px) {
+                    font-size: 5.4rem;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    font-size: 4.8rem;
+                }
+            }
+
+            .byline {
+                @include chronicle-display();
+                font-size: 1.8rem;
+                margin: 0 0 2rem;
+
+                &:before {
+                    content:"by";
+                    @include chronicle-display-italic();
+                }
+                time {
+                    @include knockout-50;
+                    font-size: 1.6rem;
+                    border-left: 2px solid $white;
+                    padding: 4px 0 2px 10px;
+                    margin-left: 10px;
+                    display: inline-block;
+                }
+            }
+            @media only screen and (max-width: 1440px) {
+                .Share-icons {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        .player {
+            background: $white;
+            color: $dark-green;
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            min-width: 30rem;
+            margin: 0 auto;
+
+            @media only screen and (max-width: 1023px) {
+                min-width: auto;
+            }
+
+            @media only screen and (max-width: 767px) {
+                margin: 2rem auto 0;
+            }
+
+            .play-icon {
+                margin: 0 1rem 0 0;
+
+                svg {
+                    width: 5rem;
+
+                    .cls-1 {
+                        fill: $new-gold;
+                        transition: fill 0.3s;
+                    }
+
+                    .cls-2 {
+                       fill: $white;
+                       transition: fill 0.3s;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    svg {
+
+                        .cls-1 {
+                            fill: $gold;
+                        }
+
+                        .cls-2 {
+                            fill: $black;
+                        }
+                    }
+                }
+
+                &.active {
+
+                    svg {
+
+                        .cls-1 {
+                            fill: $gold;
+                        }
+
+                        .cls-2 {
+                            fill: $black;
+                        }
+                    }
+                }
+            }
+
+            .episode {
+                @include knockout-50();
+                text-transform: uppercase;
+                font-size: 2rem;
+            }
+
+            .via {
+                @include knockout-30();
+                font-size: 1.6rem;
+                color: $grey;
+                flex-grow: 1;
+                text-align: left;
+                margin: 0 0 -0.3rem;
+                text-transform: none;
+                display: block;
+            }
+        }
+    }
+
+    .Share-icons {
+        display: none;
+    }
+
+    @media only screen and (max-width: 1279px) {
+        width: calc(100% - 14rem);
+    }
+
+    @media only screen and (max-width: 767px) {
+        width: 100%;
+    }
+}

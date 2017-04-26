@@ -1,0 +1,15 @@
+// _lookbook.scss
+
+.Lookbook {
+
+    .Lookbook-modal {
+        position: relative;
+        opacity: 1;
+        width: 100%;
+        height: initial;
+        overflow: hidden;
+        margin: 0 0 5rem;
+        pointer-events: initial;
+        z-index: 1;
+    }
+}

@@ -1,0 +1,119 @@
+// _hero-copy.scss
+
+.Hero-copy {
+	text-align: center;
+	width: 50%;
+	padding: 0 0 0 5rem;
+	margin: -3rem 0 0;
+
+	.flair {
+		max-width: 7.5rem;
+		margin: 0 auto 2rem;
+		//
+		display: none;
+
+		img {
+			max-height: 5rem;
+		}
+
+		@media only screen and (max-width: 1023px) {
+		    max-width: 5.5rem;
+		}
+
+		@media only screen and (max-width: 767px) {
+		    display: none;
+		}
+	}
+
+	.title {
+		@include knockout-50;
+		font-size: 1.6rem;
+		color: $gold;
+		text-transform: uppercase;
+		margin: 1rem 0;
+		//
+		display: none;
+	}
+
+	.headline {
+		@include chronicle-semi;
+		font-size: calc(0.5rem + 5.5vw);
+		line-height: 1;
+		letter-spacing: -1px;
+		margin: 0 0 2rem;
+
+		@media only screen and (min-width: 1280px) {
+			font-size: 8rem;
+		}
+
+		@media only screen and (max-width: 767px) {
+		    font-size: 4.2rem;
+		}
+	}
+
+	.dek {
+		@include knockout-30;
+		font-size: calc(1rem + 1.5vw);
+		line-height: 1;
+		margin: 0 0 2rem;
+
+		@media only screen and (min-width: 1280px) {
+		    font-size: 3rem;
+		}
+
+		@media only screen and (max-width: 767px) {
+			font-size: 2.4rem;
+		}
+	}
+
+	.meta {
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		width: 100%;
+		margin: 0 0 2rem;
+
+		.byline {
+			@include chronicle-semi;
+			font-size: 1.8rem;
+			line-height: 1;
+
+			&:before {
+				content: "by";
+				@include chronicle-semi-italic;
+			}
+		}
+
+		.date {
+			@include knockout-50;
+			color: $black;
+			font-size: 1.6rem;
+			opacity: 0.25;
+			padding: 0 0 0 1rem;
+			margin: 0 0 0 1rem;
+			border-left: 0.2rem solid $black;
+		}
+
+		.tag {
+			background: $black;
+			color: $white;
+			@include knockout-50;
+			font-size: 1.6rem;
+			padding: 0.35rem 0.7rem;
+			//
+			display: none;
+		}
+	}
+
+	@media only screen and (max-width: 1023px) {
+	    padding: 0 0 0 2.5rem;
+	}
+
+	@media only screen and (max-width: 767px) {
+	    width: 100%;
+    	margin-top: 2rem;
+    	padding: 0;
+    	margin-bottom: 4rem;
+	}
+}
